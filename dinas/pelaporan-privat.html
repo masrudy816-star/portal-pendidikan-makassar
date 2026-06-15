@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pelaporan Privat Sekolah</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/dinas.css" />
+</head>
+<body data-page="pelaporan-privat">
+  <div class="app-shell">
+    <aside class="sidebar" id="dinasSidebar"></aside>
+    <main class="main-content">
+      <header class="topbar" id="dinasTopbar"></header>
+      <section class="page-title with-action">
+        <div>
+          <p class="eyebrow">Internal Dinas</p>
+          <h1>Pelaporan Privat Sekolah</h1>
+          <p>Laporan kondisi sarana/prasarana, kebutuhan perbaikan, bukti foto, status laporan, dan urgensi. Halaman ini hanya untuk admin Dinas.</p>
+        </div>
+        <span class="access-chip"><i class="fa-solid fa-lock"></i> Tidak Publik</span>
+      </section>
+
+      <section class="metric-grid" id="privateReportMetrics"></section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <div>
+            <h2>Filter Laporan Privat</h2>
+            <span class="helper">Gunakan filter untuk memilah laporan berdasarkan sekolah, kecamatan, jenjang, status, urgensi, dan jenis sarpras.</span>
+          </div>
+          <div class="panel-actions">
+            <button class="secondary-button slim" id="exportPrivatePdf" type="button"><i class="fa-solid fa-file-pdf"></i> Export PDF</button>
+            <button class="secondary-button slim" id="exportPrivateCsv" type="button"><i class="fa-solid fa-file-excel"></i> Export Excel/CSV</button>
+          </div>
+        </div>
+        <div class="filter-row four">
+          <input id="privateReportSearch" type="search" placeholder="Cari sekolah, kebutuhan, pelapor..." />
+          <select id="privateReportSchool">
+            <option value="">Semua sekolah</option>
+          </select>
+          <select id="privateReportDistrict">
+            <option value="">Semua kecamatan</option>
+          </select>
+          <select id="privateReportLevel">
+            <option value="">Semua jenjang</option>
+            <option>SD</option>
+            <option>SMP</option>
+            <option>SMA</option>
+            <option>SMK</option>
+          </select>
+          <select id="privateReportStatus">
+            <option value="">Semua status</option>
+            <option>Baru</option>
+            <option>Diproses</option>
+            <option>Butuh Verifikasi</option>
+            <option>Selesai</option>
+            <option>Ditolak</option>
+          </select>
+          <select id="privateReportUrgency">
+            <option value="">Semua urgensi</option>
+            <option>Rendah</option>
+            <option>Sedang</option>
+            <option>Tinggi</option>
+            <option>Mendesak</option>
+          </select>
+          <select id="privateReportType">
+            <option value="">Semua jenis</option>
+          </select>
+        </div>
+      </section>
+
+      <section class="private-report-grid section-gap" id="privateReportList"></section>
+
+      <div class="modal-backdrop" id="privateReportModal" hidden>
+        <section class="detail-modal" role="dialog" aria-modal="true" aria-labelledby="privateReportModalTitle">
+          <div class="modal-head">
+            <div>
+              <p class="eyebrow">Detail Laporan Privat</p>
+              <h2 id="privateReportModalTitle">Detail Laporan</h2>
+              <span class="helper" id="privateReportModalSubtitle"></span>
+            </div>
+            <button class="icon-button" id="closePrivateReportModal" type="button" aria-label="Tutup detail"><i class="fa-solid fa-xmark"></i></button>
+          </div>
+          <div class="modal-content" id="privateReportModalContent"></div>
+        </section>
+      </div>
+    </main>
+  </div>
+  <script src="assets/js/dinas.js"></script>
+</body>
+</html>

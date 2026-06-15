@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daftar Sekolah</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/dinas.css" />
+</head>
+<body data-page="sekolah">
+  <div class="app-shell">
+    <aside class="sidebar" id="dinasSidebar"></aside>
+    <main class="main-content">
+      <header class="topbar" id="dinasTopbar"></header>
+      <section class="page-title">
+        <p class="eyebrow">Monitoring</p>
+        <h1>Daftar Sekolah</h1>
+        <p>Kelola dan pantau status website seluruh sekolah di Kota Makassar.</p>
+      </section>
+
+      <section class="metric-grid compact" id="schoolMetrics"></section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <div>
+            <h2>Data Sekolah</h2>
+            <span class="helper" id="schoolCount">0 sekolah ditampilkan</span>
+          </div>
+          <div class="panel-actions">
+            <a href="website.html#input-website">Input website</a>
+            <a href="website.html">Monitoring website</a>
+          </div>
+        </div>
+        <div class="filter-row four">
+          <input id="schoolSearch" type="search" placeholder="Cari nama, NPSN, kecamatan, atau operator..." />
+          <select id="levelFilter">
+            <option value="">Semua jenjang</option>
+            <option>SD</option>
+            <option>SMP</option>
+            <option>SMA</option>
+            <option>SMK</option>
+          </select>
+          <select id="districtFilter">
+            <option value="">Semua kecamatan</option>
+          </select>
+          <select id="statusFilter">
+            <option value="">Semua status</option>
+            <option>Aktif</option>
+            <option>Dalam Perbaikan</option>
+            <option>Tidak Aktif</option>
+          </select>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>No</th>
+                <th>Nama Sekolah</th>
+                <th>Jenjang</th>
+                <th>Kecamatan</th>
+                <th>Status</th>
+                <th>Kelengkapan</th>
+                <th>Aksi</th>
+              </tr>
+            </thead>
+            <tbody id="schoolTable"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="assets/js/dinas.js"></script>
+</body>
+</html>

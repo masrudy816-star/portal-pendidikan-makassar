@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Statistik & Laporan</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/dinas.css" />
+</head>
+<body data-page="laporan">
+  <div class="app-shell">
+    <aside class="sidebar" id="dinasSidebar"></aside>
+    <main class="main-content">
+      <header class="topbar" id="dinasTopbar"></header>
+      <section class="page-title">
+        <p class="eyebrow">Laporan</p>
+        <h1>Statistik & Laporan</h1>
+        <p>Ringkasan capaian monitoring website sekolah berdasarkan status, jenjang, konten, dan sarpras.</p>
+      </section>
+
+      <section class="metric-grid" id="reportMetrics"></section>
+
+      <section class="dashboard-grid">
+        <article class="panel">
+          <div class="panel-head">
+            <div>
+              <h2>Tren Kelengkapan Konten</h2>
+              <span class="helper">Simulasi perkembangan semester berjalan.</span>
+            </div>
+          </div>
+          <div class="bar-chart" id="monthlyTrend"></div>
+        </article>
+        <article class="panel">
+          <div class="panel-head">
+            <div>
+              <h2>Ekspor Laporan</h2>
+              <span class="helper">Prototype tombol ekspor untuk kebutuhan produksi.</span>
+            </div>
+          </div>
+          <button class="primary-button" type="button"><i class="fa-solid fa-file-arrow-down"></i> Unduh Rekap Monitoring</button>
+          <p class="helper form-note">Pada versi produksi, tombol ini akan menghasilkan Excel/PDF dari database.</p>
+        </article>
+      </section>
+
+      <section class="panel section-gap">
+        <div class="panel-head">
+          <div>
+            <h2>Rekap per Jenjang</h2>
+            <span class="helper">Agregasi status website, konten, publikasi, dan sarpras.</span>
+          </div>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Jenjang</th>
+                <th>Total Sekolah</th>
+                <th>Website Aktif</th>
+                <th>Kelengkapan</th>
+                <th>Berita</th>
+                <th>Sarpras</th>
+              </tr>
+            </thead>
+            <tbody id="reportLevelTable"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="assets/js/dinas.js"></script>
+</body>
+</html>

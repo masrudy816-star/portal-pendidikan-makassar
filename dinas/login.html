@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Dashboard Dinas Pendidikan Kota Makassar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/dinas.css" />
+</head>
+<body class="login-page">
+  <main class="login-shell">
+    <section class="login-intro">
+      <div class="dinas-logo">D</div>
+      <p class="eyebrow">Dinas Pendidikan Kota Makassar</p>
+      <h1>Sistem Monitoring Website Sekolah</h1>
+      <p>Platform untuk memantau kelengkapan, aktivitas, sarana prasarana, berita, dan pengelolaan website sekolah secara terpadu.</p>
+      <div class="login-feature"><strong>Aman & Terpantau</strong><span>Monitoring seluruh website sekolah dalam satu dashboard.</span></div>
+      <div class="login-feature"><strong>Siap Multi Sekolah</strong><span>Dirancang untuk 100-300 website sekolah di Kota Makassar.</span></div>
+    </section>
+    <section class="login-card">
+      <p class="eyebrow">Portal Internal</p>
+      <h2>Masuk ke Dashboard</h2>
+      <form id="dinasLoginForm">
+        <label>Email atau Username<input type="text" value="admin" required /></label>
+        <label>Password<input type="password" value="admin123" required /></label>
+        <button type="submit">Masuk Dashboard</button>
+      </form>
+      <small>Demo lokal: gunakan username <strong>admin</strong> dan password <strong>admin123</strong>.</small>
+    </section>
+  </main>
+  <script>
+    document.getElementById("dinasLoginForm").addEventListener("submit", (event) => {
+      event.preventDefault();
+      localStorage.setItem("dinasLoggedIn", "true");
+      location.href = "dashboard.html";
+    });
+  </script>
+</body>
+</html>

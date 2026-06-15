@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pengguna</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/dinas.css" />
+</head>
+<body data-page="pengguna">
+  <div class="app-shell">
+    <aside class="sidebar" id="dinasSidebar"></aside>
+    <main class="main-content">
+      <header class="topbar" id="dinasTopbar"></header>
+      <section class="page-title">
+        <p class="eyebrow">Akun</p>
+        <h1>Pengguna</h1>
+        <p>Kelola akun super admin dinas, admin sekolah, operator sekolah, dan verifikator.</p>
+      </section>
+
+      <section class="metric-grid compact" id="userMetrics"></section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <div>
+            <h2>Daftar Pengguna</h2>
+            <span class="helper">Prototype manajemen akses untuk dashboard dinas dan sekolah.</span>
+          </div>
+          <a href="pengaturan.html">Pengaturan akses</a>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Nama</th>
+                <th>Email</th>
+                <th>Peran</th>
+                <th>Unit/Sekolah</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="userTable"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="assets/js/dinas.js"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sarana dan Prasarana</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css?v=20260614-hero-text-hide-fix" />
+</head>
+<body data-page="fasilitas">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html#beranda" aria-label="Kembali ke beranda">
+        <img id="logo" src="assets/img/logo-placeholder.svg" alt="Logo sekolah" />
+        <span class="brand-copy">
+          <strong data-text="schoolName">Nama Sekolah</strong>
+          <small data-text="tagline">Tagline sekolah</small>
+        </span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation">
+        <span class="sr-only">Buka menu navigasi</span>
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <nav class="main-nav" id="main-navigation" aria-label="Navigasi utama">
+        <a href="index.html#beranda">Beranda</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-toggle" type="button" aria-expanded="false">
+            Profil <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="nav-dropdown-menu">
+            <a href="profil.html">Profil Sekolah</a>
+            <a href="visi-misi.html">Visi dan Misi</a>
+            <a href="sejarah.html">Sejarah Sekolah</a>
+            <a href="fasilitas.html">Sarana &amp; Prasarana</a>
+            <a href="ekstrakurikuler.html">Ekstrakurikuler</a>
+            <a href="direktori-guru.html">Direktori GTK</a>
+          </div>
+        </div>
+        <a href="index.html#akademik">Akademik</a>
+        <a href="index.html#kesiswaan">Kesiswaan</a>
+        <a href="layanan.html">Layanan</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-toggle" type="button" aria-expanded="false">
+            Informasi Publik <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="nav-dropdown-menu nav-dropdown-menu-wide">
+            <a href="berita.html">Berita &amp; Pengumuman</a>
+            <a href="spp.html">Informasi SPP</a>
+            <a href="ppdb.html">PPDB / SPMB</a>
+            <a href="direktori-guru.html">Direktori GTK</a>
+            <a href="layanan.html">Pusat Layanan</a>
+          </div>
+        </div>
+        <a href="galeri.html">Galeri</a>
+        <a href="index.html#kontak">Kontak</a>
+        <a class="nav-cta" data-link="admissionUrl" href="ppdb.html">SPMB / PPDB</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="page-banner">
+      <div class="container page-banner-inner">
+        <p class="section-kicker" id="pageBannerKicker"></p>
+        <h1 id="pageBannerTitle"></h1>
+        <p id="pageBannerDescription"></p>
+        <div class="page-banner-actions" id="pageBannerActions"></div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container inner-layout">
+        <article class="content-panel">
+          <div class="info-highlight-grid" id="pageHighlights"></div>
+          <div id="pageContentBlocks"></div>
+          <div id="pageDynamicContent"></div>
+        </article>
+        <aside class="page-sidebar">
+          <div class="sidebar-card">
+            <h3>Link Penting</h3>
+            <div class="sidebar-link-list" id="sidebarQuickLinks"></div>
+          </div>
+          <div class="sidebar-card">
+            <h3>Berita Terbaru</h3>
+            <div class="sidebar-news-list" id="sidebarNewsList"></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; <span id="currentYear"></span> <span data-text="schoolName">Nama Sekolah</span>.</p>
+        <p>Portal Sekolah Kota Makassar</p>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/app.js?v=20260614-hero-text-hide-fix"></script>
+</body>
+</html>

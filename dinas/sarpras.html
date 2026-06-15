@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sarana & Prasarana</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/dinas.css" />
+</head>
+<body data-page="sarpras">
+  <div class="app-shell">
+    <aside class="sidebar" id="dinasSidebar"></aside>
+    <main class="main-content">
+      <header class="topbar" id="dinasTopbar"></header>
+      <section class="page-title">
+        <p class="eyebrow">Sarpras</p>
+        <h1>Sarana & Prasarana</h1>
+        <p>Monitoring data sarana dan prasarana yang dipublikasikan pada website sekolah.</p>
+      </section>
+
+      <section class="metric-grid" id="facilityMetrics"></section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <div>
+            <h2>Publikasi Sarana & Prasarana</h2>
+            <span class="helper">Menampilkan jumlah data fasilitas dan kelengkapan halaman sarpras di website sekolah.</span>
+          </div>
+          <a href="laporan.html">Lihat laporan</a>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Sekolah</th>
+                <th>Data Sarpras</th>
+                <th>Update Terakhir</th>
+                <th>Status Website</th>
+                <th>Kelengkapan Halaman</th>
+                <th>Aksi</th>
+              </tr>
+            </thead>
+            <tbody id="facilityTable"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="assets/js/dinas.js"></script>
+</body>
+</html>

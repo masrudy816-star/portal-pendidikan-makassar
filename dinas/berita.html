@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Berita & Kegiatan</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/dinas.css" />
+</head>
+<body data-page="berita">
+  <div class="app-shell">
+    <aside class="sidebar" id="dinasSidebar"></aside>
+    <main class="main-content">
+      <header class="topbar" id="dinasTopbar"></header>
+      <section class="page-title">
+        <p class="eyebrow">Publikasi</p>
+        <h1>Berita & Kegiatan</h1>
+        <p>Monitoring aktivitas publikasi berita, agenda, dan dokumentasi kegiatan sekolah.</p>
+      </section>
+
+      <section class="metric-grid" id="newsMetrics"></section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <div>
+            <h2>Aktivitas Publikasi</h2>
+            <span class="helper">Pantau sekolah yang aktif memperbarui berita dan kegiatan.</span>
+          </div>
+          <a href="konten.html">Lihat kelengkapan konten</a>
+        </div>
+        <div class="filter-row news-filter">
+          <input id="newsSearch" type="search" placeholder="Cari sekolah atau kegiatan..." />
+          <select id="newsTypeFilter">
+            <option value="">Semua aktivitas</option>
+            <option>Berita</option>
+            <option>Galeri</option>
+            <option>Konten</option>
+            <option>Sarpras</option>
+            <option>Website</option>
+          </select>
+        </div>
+        <div class="activity-list large" id="newsActivity"></div>
+      </section>
+
+      <section class="panel news-school-panel">
+        <div class="panel-head">
+          <div>
+            <h2>Rekap Berita per Sekolah</h2>
+            <span class="helper">Jumlah berita yang tercatat pada website masing-masing sekolah.</span>
+          </div>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Sekolah</th>
+                <th>Status Website</th>
+                <th>Jumlah Berita</th>
+                <th>Update Terakhir</th>
+                <th>Kelengkapan</th>
+                <th>Aksi</th>
+              </tr>
+            </thead>
+            <tbody id="newsSchoolTable"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="assets/js/dinas.js"></script>
+</body>
+</html>

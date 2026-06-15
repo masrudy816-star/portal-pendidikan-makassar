@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-label="Logo Dinas Pendidikan">
+  <rect width="96" height="96" rx="22" fill="#9b0505"/>
+  <path d="M48 12 78 26v20c0 19-12 31-30 39-18-8-30-20-30-39V26l30-14Z" fill="#f6c400"/>
+  <path d="M31 34h34v8H31v-8Zm0 15h34v8H31v-8Zm7 15h20v7H38v-7Z" fill="#630000"/>
+  <circle cx="48" cy="27" r="5" fill="#630000"/>
+</svg>

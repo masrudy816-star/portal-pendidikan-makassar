@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galeri</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/dinas.css" />
+</head>
+<body data-page="galeri">
+  <div class="app-shell">
+    <aside class="sidebar" id="dinasSidebar"></aside>
+    <main class="main-content">
+      <header class="topbar" id="dinasTopbar"></header>
+      <section class="page-title">
+        <p class="eyebrow">Galeri</p>
+        <h1>Monitoring Galeri</h1>
+        <p>Pantau jumlah dokumentasi foto dan keterhubungan publikasi kegiatan sekolah.</p>
+      </section>
+
+      <section class="metric-grid compact" id="galleryMetrics"></section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <div>
+            <h2>Rekap Galeri Sekolah</h2>
+            <span class="helper">Sekolah dengan galeri minim perlu didorong mengunggah dokumentasi kegiatan.</span>
+          </div>
+          <a href="berita.html">Lihat berita</a>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Sekolah</th>
+                <th>Jumlah Foto</th>
+                <th>Berita</th>
+                <th>Kelengkapan Galeri</th>
+                <th>Aksi</th>
+              </tr>
+            </thead>
+            <tbody id="galleryTable"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="assets/js/dinas.js"></script>
+</body>
+</html>

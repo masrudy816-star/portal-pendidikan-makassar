@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Monitoring Website Sekolah</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/dinas.css" />
+</head>
+<body data-page="website">
+  <div class="app-shell">
+    <aside class="sidebar" id="dinasSidebar"></aside>
+    <main class="main-content">
+      <header class="topbar" id="dinasTopbar"></header>
+      <section class="page-title">
+        <p class="eyebrow">Website Sekolah</p>
+        <h1>Monitoring Website</h1>
+        <p>Daftar URL, status aktif, pembaruan terakhir, dan tindak lanjut website sekolah.</p>
+      </section>
+
+      <section class="metric-grid" id="websiteMetrics"></section>
+
+      <section class="dashboard-grid website-overview">
+        <article class="panel">
+          <div class="panel-head">
+            <div>
+              <h2>Distribusi Status</h2>
+              <span class="helper">Perbandingan website aktif dan yang perlu ditindaklanjuti.</span>
+            </div>
+          </div>
+          <div class="status-stack" id="websiteStatusStack"></div>
+        </article>
+        <article class="panel">
+          <div class="panel-head">
+            <div>
+              <h2>Prioritas Monitoring</h2>
+              <span class="helper">Sekolah dengan status atau kelengkapan yang perlu perhatian.</span>
+            </div>
+          </div>
+          <div class="low-list" id="websitePriorityList"></div>
+        </article>
+      </section>
+
+      <section class="dashboard-grid section-gap">
+        <article class="panel">
+          <div class="panel-head">
+            <div>
+              <h2>Alur Monitoring Website</h2>
+              <span class="helper">Gambaran bagaimana Dinas menerima dan memantau data dari website sekolah.</span>
+            </div>
+          </div>
+          <div class="process-grid">
+            <div><i class="fa-solid fa-link"></i><strong>1. Daftarkan URL</strong><span>Admin Dinas memasukkan identitas sekolah dan alamat website.</span></div>
+            <div><i class="fa-solid fa-shield-halved"></i><strong>2. Validasi Akses</strong><span>Sistem memastikan URL unik, aktif, dan dimiliki sekolah terkait.</span></div>
+            <div><i class="fa-solid fa-rotate"></i><strong>3. Sinkronisasi</strong><span>Website sekolah mengirim log konten, berita, galeri, dan sarpras.</span></div>
+            <div><i class="fa-solid fa-chart-simple"></i><strong>4. Dashboard Dinas</strong><span>Dinas melihat status, kelengkapan, aktivitas, dan tindak lanjut.</span></div>
+          </div>
+        </article>
+        <article class="panel">
+          <div class="panel-head">
+            <div>
+              <h2>Status Integrasi</h2>
+              <span class="helper">Simulasi kesiapan integrasi backend untuk produksi.</span>
+            </div>
+            <button class="secondary-button slim" id="runWebsiteCheck" type="button"><i class="fa-solid fa-arrows-rotate"></i> Cek Sekarang</button>
+          </div>
+          <div class="monitoring-insights" id="websiteInsights"></div>
+          <p class="helper form-note" id="checkMessage">Pengecekan otomatis akan dijalankan oleh server pada versi produksi.</p>
+        </article>
+      </section>
+
+      <section class="panel website-register-panel">
+        <div class="panel-head">
+          <div>
+            <h2>Daftarkan Website Sekolah</h2>
+            <span class="helper">Masukkan URL website sekolah yang akan dipantau oleh Dinas Pendidikan.</span>
+          </div>
+        </div>
+        <form class="register-grid" id="websiteRegisterForm">
+          <label>Nama Sekolah<input name="name" placeholder="Contoh: SMP Negeri 99 Makassar" required /></label>
+          <label>NPSN<input name="npsn" placeholder="Contoh: 40309999" required /></label>
+          <label>Jenjang
+            <select name="level" required>
+              <option value="">Pilih jenjang</option>
+              <option>SD</option>
+              <option>SMP</option>
+              <option>SMA</option>
+              <option>SMK</option>
+            </select>
+          </label>
+          <label>Kecamatan<input name="district" placeholder="Contoh: Tamalanrea" required /></label>
+          <label>URL Website<input name="url" type="url" placeholder="https://sekolah.sch.id" required /></label>
+          <label>Operator<input name="operator" placeholder="Nama operator sekolah" required /></label>
+          <button class="primary-button" type="submit"><i class="fa-solid fa-plus"></i> Tambahkan ke Monitoring</button>
+          <button class="secondary-button" id="resetLocalSchools" type="button"><i class="fa-solid fa-rotate-left"></i> Reset Data Tambahan</button>
+        </form>
+        <p class="helper form-note" id="registerMessage">Prototype ini menyimpan tambahan sekolah di browser perangkat ini.</p>
+      </section>
+
+      <section class="panel website-table-panel">
+        <div class="panel-head">
+          <div>
+            <h2>Daftar Website Sekolah</h2>
+            <span class="helper">Gunakan filter untuk memantau status website setiap sekolah.</span>
+          </div>
+        </div>
+        <div class="filter-row">
+          <input id="websiteSearch" type="search" placeholder="Cari sekolah, operator, atau URL..." />
+          <select id="websiteLevelFilter">
+            <option value="">Semua jenjang</option>
+            <option>SD</option>
+            <option>SMP</option>
+            <option>SMA</option>
+            <option>SMK</option>
+          </select>
+          <select id="websiteStatusFilter">
+            <option value="">Semua status</option>
+            <option>Aktif</option>
+            <option>Dalam Perbaikan</option>
+            <option>Tidak Aktif</option>
+          </select>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Sekolah</th>
+                <th>URL</th>
+                <th>Status</th>
+                <th>Terakhir Update</th>
+                <th>Monitoring</th>
+                <th>Operator</th>
+                <th>Kelengkapan</th>
+                <th>Aksi</th>
+              </tr>
+            </thead>
+            <tbody id="websiteTable"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="assets/js/dinas.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+.DS_Store
+Thumbs.db
+
+# Local server / package noise
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Generated demo bundles
+deploy-demo/
+*.zip
+
+# Editor files
+.vscode/
+.idea/
+
+# Temporary files
+tmp/
+temp/
+*.tmp

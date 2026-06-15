@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Panel | SMA Negeri 1 Makassar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/admin.css?v=20260615-report-form" />
+</head>
+<body>
+  <main class="admin-shell">
+    <section class="login-card" id="loginPanel">
+      <p class="eyebrow">Panel Khusus Admin</p>
+      <h1>Kelola Website Sekolah</h1>
+      <p>Masukkan kode admin untuk membuka panel pengelolaan konten.</p>
+      <form id="loginForm">
+        <label>
+          Kode Admin
+          <input id="adminPassword" type="password" autocomplete="current-password" placeholder="Masukkan kode admin" required />
+        </label>
+        <button type="submit">Masuk Panel</button>
+        <small>Kode awal: <strong>admin123</strong>. Ini pengaman lokal, bukan login produksi.</small>
+      </form>
+    </section>
+
+    <section class="dashboard" id="dashboard" hidden>
+      <aside class="admin-sidebar">
+        <div class="admin-brand">
+          <span>SM</span>
+          <div>
+            <strong>Admin Sekolah</strong>
+            <small>Kontrol Panel Website</small>
+          </div>
+        </div>
+        <nav>
+          <a href="#identitas">Identitas</a>
+          <a href="#kelengkapan">Kelengkapan</a>
+          <a href="#hero">Slider Utama</a>
+          <a href="#kartu-beranda">Kartu Beranda</a>
+          <a href="#visi">Visi Misi</a>
+          <a href="#layanan-cepat">Layanan Cepat</a>
+          <a href="#halaman-layanan">Halaman Layanan</a>
+          <a href="#berita">Berita</a>
+          <a href="#agenda">Agenda</a>
+          <a href="#prestasi">Prestasi</a>
+          <a href="#statistik">Sekolah dalam Angka</a>
+          <a href="#program">Program</a>
+          <a href="#guru">Guru / GTK</a>
+          <a href="#galeri">Galeri</a>
+          <a href="#fasilitas">Fasilitas</a>
+          <a href="#ekskul">Ekstrakurikuler</a>
+          <a href="#link-penting">Link Penting</a>
+          <a href="#unduhan">Unduhan</a>
+          <a href="#lanjutan">Mode Lanjutan</a>
+          <a href="#pelaporan">Pelaporan</a>
+        </nav>
+        <button class="ghost-button" id="logoutButton" type="button">Keluar</button>
+      </aside>
+
+      <section class="admin-content">
+        <header class="admin-topbar">
+          <div>
+            <p class="eyebrow">Dashboard</p>
+            <h1>Kelola Konten Website</h1>
+          </div>
+          <div class="top-actions">
+            <button class="ghost-button" id="chooseFolderButton" type="button">Mode Cadangan: Pilih Folder Project</button>
+            <button class="primary-button" id="saveButton" type="button">Simpan Perubahan ke Website</button>
+            <a class="preview-link" href="index.html" target="_blank" rel="noopener">Lihat Website</a>
+          </div>
+        </header>
+
+        <div class="notice" id="statusBox">Jika dibuka lewat server admin lokal, panel akan menyimpan langsung ke website.</div>
+
+        <section class="admin-section" id="kelengkapan">
+          <div class="section-title">
+            <div>
+              <p class="eyebrow">Monitoring Konten</p>
+              <h2>Kelengkapan Website</h2>
+            </div>
+            <button class="ghost-button" id="refreshCompletenessButton" type="button">Periksa Ulang</button>
+          </div>
+          <div class="completion-summary">
+            <div>
+              <strong id="completionScore">0%</strong>
+              <span>Skor kelengkapan konten</span>
+            </div>
+            <div class="completion-bar"><span id="completionBar"></span></div>
+          </div>
+          <div class="completion-grid" id="completionList"></div>
+        </section>
+
+        <section class="admin-section" id="identitas">
+          <div class="section-title">
+            <div>
+              <p class="eyebrow">Data Umum</p>
+              <h2>Identitas Sekolah</h2>
+            </div>
+          </div>
+          <div class="form-grid">
+            <label>ID Sekolah<input data-field="schoolId" placeholder="contoh: sman1-makassar" /></label>
+            <label>NPSN<input data-field="npsn" /></label>
+            <label>Jenjang<input data-field="educationLevel" placeholder="SD / SMP / SMA" /></label>
+            <label>Kecamatan<input data-field="district" /></label>
+            <label>Akreditasi<input data-field="accreditation" /></label>
+            <label>Status Website<input data-field="websiteStatus" placeholder="active / maintenance / inactive" /></label>
+            <label>Nama Sekolah<input data-field="schoolName" /></label>
+            <label>Nama Singkat<input data-field="shortName" /></label>
+            <label>Tagline<input data-field="tagline" /></label>
+            <label>Alamat<input data-field="address" /></label>
+            <label>Telepon<input data-field="phone" /></label>
+            <label>Email<input data-field="email" /></label>
+            <label>WhatsApp<input data-field="whatsapp" /></label>
+            <label>Jam Layanan<input data-field="serviceHours" /></label>
+            <label>URL PPDB / SPMB<input data-field="admissionUrl" /></label>
+            <label>Google Maps URL atau Embed<input data-field="mapEmbedUrl" /><small>Bisa isi alamat lengkap, URL Google Maps dari address bar, link embed, atau kode iframe. Untuk titik paling presisi, gunakan URL Google Maps lengkap atau kode iframe embed.</small></label>
+            <label>Logo Sekolah
+              <div class="image-row">
+                <input data-field="logo" />
+                <input data-direct-upload="logo" type="file" accept="image/*" />
+              </div>
+              <div class="image-preview" data-preview-for="logo"></div>
+            </label>
+            <label>Foto Kepala Sekolah
+              <div class="image-row">
+                <input data-field="principalPhoto" />
+                <input data-direct-upload="principalPhoto" type="file" accept="image/*" />
+              </div>
+              <div class="image-preview" data-preview-for="principalPhoto"></div>
+            </label>
+            <label>Nama Kepala Sekolah<input data-field="principalName" /></label>
+            <label>Jabatan Kepala Sekolah<input data-field="principalPosition" /></label>
+            <label>Instagram<input data-nested-field="socialMedia.instagram" /></label>
+            <label>Facebook<input data-nested-field="socialMedia.facebook" /></label>
+            <label>YouTube<input data-nested-field="socialMedia.youtube" /></label>
+            <label>TikTok<input data-nested-field="socialMedia.tiktok" /></label>
+            <label>X / Twitter<input data-nested-field="socialMedia.twitter" /></label>
+            <label>LinkedIn<input data-nested-field="socialMedia.linkedin" /></label>
+            <label>WhatsApp URL<input data-field="whatsappUrl" /></label>
+            <label class="wide">Sambutan Kepala Sekolah<textarea data-field="principalMessage" rows="5"></textarea></label>
+          </div>
+        </section>
+
+        <section class="admin-section" id="hero">
+          <div class="section-title">
+            <div>
+              <p class="eyebrow">Beranda</p>
+              <h2>Slider Foto Utama</h2>
+            </div>
+            <button class="primary-button" data-add="hero" type="button">Tambah Slide</button>
+          </div>
+          <div class="repeat-list" id="heroEditor"></div>
+        </section>
+
+        <section class="admin-section" id="kartu-beranda">
+          <div class="section-title">
+            <div>
+              <p class="eyebrow">Beranda</p>
+              <h2>Kartu Sarana, Prasarana, dan Ekstrakurikuler</h2>
+            </div>
+            <div class="top-actions">
+              <button class="ghost-button" id="resetFeaturedCardsButton" type="button">Kembalikan Kolase Bawaan</button>
+              <button class="primary-button" data-add="featured" type="button">Tambah Kartu</button>
+            </div>
+          </div>
+          <p class="helper-text">Bagian ini muncul di beranda. Tampilan 6 foto memakai gambar kolase bawaan. Jika admin upload satu foto biasa, kolase akan terganti; gunakan tombol kembalikan kolase untuk memakai tampilan bawaan lagi.</p>
+          <div class="repeat-list" id="featuredInfoEditor"></div>
+        </section>
+
+        <section class="admin-section" id="visi">
+          <div class="section-title">
+            <div>
+              <p class="eyebrow">Arah Sekolah</p>
+              <h2>Visi, Misi, dan Nilai</h2>
+            </div>
+          </div>
+          <div class="form-grid">
+            <label class="wide">Visi Sekolah<textarea id="visionEditor" rows="4"></textarea></label>
+            <label class="wide">Misi Sekolah <small>Satu baris untuk satu misi.</small><textarea id="missionsEditor" rows="7"></textarea></label>
+            <label class="wide">Nilai Utama <small>Pisahkan dengan baris baru.</small><textarea id="valuesEditor" rows="4"></textarea></label>
+          </div>
+        </section>
+
+        <section class="admin-section" id="layanan-cepat">
+          <div class="section-title">
+            <div>
+              <p class="eyebrow">Beranda</p>
+              <h2>Layanan Cepat</h2>
+            </div>
+            <button class="primary-button" data-add="service" type="button">Tambah Layanan</button>
+          </div>
+          <div class="repeat-list" id="serviceEditor"></div>
+        </section>
+
+        <section class="admin-section" id="halaman-layanan">
+          <div class="section-title">
+            <div>
+              <p class="eyebrow">Pusat Layanan</p>
+              <h2>Halaman dan Kartu Layanan</h2>
+            </div>
+            <button class="primary-button" data-add="service-card" type="button">Tambah Kartu Layanan</button>
+          </div>
+          <p class="helper-text">Atur kartu di halaman Pusat Layanan serta isi halaman E-Learning, E-Rapor, Perpustakaan, Jadwal, dan Unduhan.</p>
+          <div class="section-subtitle">
+            <div>
+              <h3>Kartu Pusat Layanan</h3>
+              <p class="helper-text">Kartu ini muncul di <code>layanan.html</code> dan bisa diarahkan ke halaman detail layanan.</p>
+            </div>
+          </div>
+          <div class="repeat-list" id="serviceCardEditor"></div>
+          <div class="section-subtitle">
+            <div>
+              <h3>Isi Halaman Detail Layanan</h3>
+              <p class="helper-text">Gunakan format highlight: <code>icon | judul | deskripsi</code>. Gunakan format blok: <code>Judul Blok | tipe | item 1; item 2; item 3</code>.</p>
+            </div>
+          </div>
+          <div class="repeat-list" id="servicePageEditor"></div>
+        </section>
+
+        <section class="admin-section" id="berita">
+          <div class="section-title">
+            <div>
+              <p class="eyebrow">Informasi</p>
+              <h2>Berita dan Pengumuman</h2>
+            </div>
+            <button class="primary-button" data-add="news" type="button">Tambah Berita</button>
+          </div>
+          <div class="repeat-list" id="newsEditor"></div>
+        </section>
+
+        <section class="admin-section" id="galeri">
+          <div class="section-title">
+            <div>
+              <p class="eyebrow">Foto Kegiatan</p>
+              <h2>Galeri</h2>
+            </div>
+            <button class="primary-button" data-add="gallery" type="button">Tambah Foto</button>
+          </div>
+          <div class="repeat-list" id="galleryEditor"></div>
+        </section>
+
+        <section class="admin-section" id="agenda">
+          <div class="section-title">
+            <div>
+              <p class="eyebrow">Kalender</p>
+              <h2>Agenda Terdekat</h2>
+            </div>
+            <button class="primary-button" data-add="agenda" type="button">Tambah Agenda</button>
+          </div>
+          <div class="repeat-list" id="agendaEditor"></div>
+        </section>
+
+        <section class="admin-section" id="prestasi">
+          <div class="section-title">
+            <div>
+              <p class="eyebrow">Capaian</p>
+              <h2>Prestasi Sekolah</h2>
+            </div>
+            <button class="primary-button" data-add="achievement" type="button">Tambah Prestasi</button>
+          </div>
+          <div class="repeat-list" id="achievementEditor"></div>
+        </section>
+
+        <section class="admin-section" id="statistik">
+          <div class="section-title">
+            <div>
+              <p class="eyebrow">Beranda</p>
+              <h2>Sekolah dalam Angka</h2>
+            </div>
+            <button class="primary-button" data-add="statistic" type="button">Tambah Angka</button>
+          </div>
+          <div class="repeat-list" id="statisticEditor"></div>
+        </section>
+
+        <section class="admin-section" id="program">
+          <div class="section-title">
+            <div>
+              <p class="eyebrow">Kesiswaan</p>
+              <h2>Program Unggulan</h2>
+            </div>
+            <button class="primary-button" data-add="program" type="button">Tambah Program</button>
+          </div>
+          <div class="repeat-list" id="programEditor"></div>
+        </section>
+
+        <section class="admin-section" id="guru">
+          <div class="section-title">
+            <div>
+              <p class="eyebrow">Direktori</p>
+              <h2>Guru dan Tenaga Kependidikan</h2>
+            </div>
+            <button class="primary-button" data-add="teacher" type="button">Tambah GTK</button>
+          </div>
+          <div class="repeat-list" id="teacherEditor"></div>
+        </section>
+
+        <section class="admin-section" id="fasilitas">
+          <div class="section-title">
+            <div>
+              <p class="eyebrow">Profil Sekolah</p>
+              <h2>Sarana dan Prasarana</h2>
+            </div>
+            <button class="primary-button" data-add="facility" type="button">Tambah Fasilitas</button>
+          </div>
+          <div class="section-subtitle">
+            <div>
+              <h3>Angka Fasilitas</h3>
+              <p class="helper-text">Contoh: lapangan 2, mushola 1, toilet 10. Angka ini tampil di atas foto fasilitas.</p>
+            </div>
+            <button class="ghost-button" data-add="facility-stat" type="button">Tambah Angka Fasilitas</button>
+          </div>
+          <div class="repeat-list compact-list" id="facilityStatEditor"></div>
+          <div class="section-subtitle">
+            <div>
+              <h3>Foto dan Penjelasan Fasilitas</h3>
+              <p class="helper-text">Daftar foto fasilitas yang tampil dalam grid.</p>
+            </div>
+          </div>
+          <div class="repeat-list" id="facilityEditor"></div>
+        </section>
+
+        <section class="admin-section" id="ekskul">
+          <div class="section-title">
+            <div>
+              <p class="eyebrow">Kesiswaan</p>
+              <h2>Ekstrakurikuler</h2>
+            </div>
+            <button class="primary-button" data-add="extra" type="button">Tambah Ekskul</button>
+          </div>
+          <div class="repeat-list" id="extraEditor"></div>
+        </section>
+
+        <section class="admin-section" id="unduhan">
+          <div class="section-title">
+            <div>
+              <p class="eyebrow">Dokumen</p>
+              <h2>Unduhan</h2>
+            </div>
+            <button class="primary-button" data-add="download" type="button">Tambah Unduhan</button>
+          </div>
+          <div class="repeat-list" id="downloadEditor"></div>
+        </section>
+
+        <section class="admin-section" id="link-penting">
+          <div class="section-title">
+            <div>
+              <p class="eyebrow">Sidebar</p>
+              <h2>Link Penting</h2>
+            </div>
+            <button class="primary-button" data-add="quick-link" type="button">Tambah Link</button>
+          </div>
+          <p class="helper-text">Link ini tampil di sidebar halaman dalam seperti PPDB, SPP, berita, direktori, dan layanan.</p>
+          <div class="repeat-list" id="quickLinkEditor"></div>
+        </section>
+
+
+        <section class="admin-section private-report-section" id="pelaporan">
+          <div class="section-title">
+            <div>
+              <p class="eyebrow">Khusus Dinas</p>
+              <h2>Pelaporan Privat Sekolah</h2>
+            </div>
+            <button class="primary-button" id="openReportFormButton" type="button">Tambah Laporan</button>
+          </div>
+          <div class="notice warning">
+            <strong>Data ini tidak tampil di website publik.</strong>
+            <span>Gunakan untuk laporan internal sekolah kepada Dinas Pendidikan, misalnya kondisi sarana prasarana, kebutuhan perbaikan, dan bukti foto lapangan.</span>
+          </div>
+          <div class="report-summary" id="privateReportSummary"></div>
+          <div class="report-form-panel" id="privateReportFormPanel" hidden></div>
+          <div class="section-subtitle"><div><h3>Daftar Laporan</h3><p class="helper-text">Laporan yang sudah masuk dan akan dibaca dashboard monitoring dinas.</p></div></div>
+          <div class="repeat-list" id="privateReportEditor"></div>
+        </section>
+        <section class="admin-section" id="lanjutan">
+          <div class="section-title">
+            <div>
+              <p class="eyebrow">Semua Data</p>
+              <h2>Mode Lanjutan JSON</h2>
+            </div>
+            <button class="ghost-button" id="unlockJsonButton" type="button">Buka Mode Lanjutan</button>
+          </div>
+          <p class="helper-text">Mode ini dikunci karena bisa merusak struktur data kalau kunci JSON dihapus atau diacak. Gunakan hanya untuk teknisi/pengelola website.</p>
+          <div class="advanced-lock" id="jsonLock">
+            <strong>Mode lanjutan masih terkunci.</strong>
+            <span>Kode teknisi: <code>teknisi123</code></span>
+          </div>
+          <div id="jsonTools" hidden>
+            <div class="notice warning">Sebelum menyimpan, admin panel akan membuat backup otomatis <code>data/school.backup.json</code> jika memakai server admin lokal atau folder project sudah dipilih.</div>
+            <textarea id="jsonEditor" class="json-editor" rows="22" spellcheck="false"></textarea>
+            <div class="top-actions inline-actions">
+              <button class="ghost-button" id="refreshJsonButton" type="button">Muat dari Form</button>
+              <button class="ghost-button" id="applyJsonButton" type="button">Terapkan JSON ke Form</button>
+            </div>
+          </div>
+        </section>
+      </section>
+    </section>
+  </main>
+
+  <script src="assets/js/admin.js?v=20260615-report-form"></script>
+</body>
+</html>

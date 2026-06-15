@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Konten & Informasi</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/dinas.css" />
+</head>
+<body data-page="konten">
+  <div class="app-shell">
+    <aside class="sidebar" id="dinasSidebar"></aside>
+    <main class="main-content">
+      <header class="topbar" id="dinasTopbar"></header>
+      <section class="page-title">
+        <p class="eyebrow">Konten</p>
+        <h1>Kelengkapan Konten</h1>
+        <p>Pantau profil, GTK, berita, galeri, layanan, PPDB/SPMB, SPP, unduhan, dan kontak setiap website sekolah.</p>
+      </section>
+
+      <section class="metric-grid" id="contentMetrics"></section>
+
+      <section class="dashboard-grid">
+        <article class="panel">
+          <div class="panel-head">
+            <div>
+              <h2>Rata-rata per Modul</h2>
+              <span class="helper">Nilai agregat dari seluruh website sekolah.</span>
+            </div>
+          </div>
+          <div class="bar-chart" id="contentBarsFull"></div>
+        </article>
+        <article class="panel">
+          <div class="panel-head">
+            <div>
+              <h2>Catatan Monitoring</h2>
+              <span class="helper">Prioritas pemeriksaan konten oleh tim dinas.</span>
+            </div>
+          </div>
+          <div class="note-list">
+            <div><strong>Konten wajib</strong><span>Profil, visi misi, GTK, kontak, dan layanan harus selalu terisi.</span></div>
+            <div><strong>Publikasi rutin</strong><span>Berita dan galeri menjadi indikator aktivitas website sekolah.</span></div>
+            <div><strong>Dokumen publik</strong><span>Unduhan, PPDB/SPMB, dan informasi SPP perlu mudah diakses warga.</span></div>
+          </div>
+        </article>
+      </section>
+
+      <section class="panel section-gap">
+        <div class="panel-head">
+          <div>
+            <h2>Rekap Kelengkapan Konten</h2>
+            <span class="helper">Cari sekolah untuk melihat modul konten yang perlu dilengkapi.</span>
+          </div>
+        </div>
+        <div class="filter-row single">
+          <input id="contentSearch" type="search" placeholder="Cari sekolah atau kecamatan..." />
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Sekolah</th>
+                <th>Profil</th>
+                <th>GTK</th>
+                <th>Berita</th>
+                <th>Galeri</th>
+                <th>Layanan</th>
+                <th>Rata-rata</th>
+                <th>Aksi</th>
+              </tr>
+            </thead>
+            <tbody id="contentTable"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="assets/js/dinas.js"></script>
+</body>
+</html>

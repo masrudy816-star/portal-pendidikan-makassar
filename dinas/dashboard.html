@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard Monitoring Dinas Pendidikan</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/dinas.css" />
+</head>
+<body data-page="dashboard">
+  <div class="app-shell">
+    <aside class="sidebar" id="dinasSidebar"></aside>
+    <main class="main-content">
+      <header class="topbar" id="dinasTopbar"></header>
+      <section class="hero-panel">
+        <p class="eyebrow">Dashboard Monitoring</p>
+        <h1>Selamat datang, Admin Dinas</h1>
+        <p>Pantau seluruh website sekolah Kota Makassar dari satu tempat.</p>
+      </section>
+      <section class="metric-grid" id="metricGrid"></section>
+      <section class="dashboard-grid">
+        <article class="panel"><div class="panel-head"><h2>Status Website Sekolah</h2><a href="sekolah.html">Lihat detail</a></div><div class="donut"><strong id="activePercent">0%</strong><span>Aktif</span></div><div class="legend" id="statusLegend"></div></article>
+        <article class="panel"><div class="panel-head"><h2>Kelengkapan Konten</h2><a href="konten.html">Lihat detail</a></div><div class="bar-chart" id="contentBars"></div></article>
+        <article class="panel"><div class="panel-head"><h2>Aktivitas Terbaru</h2><a href="berita.html">Lihat semua</a></div><div class="activity-list" id="activityList"></div></article>
+        <article class="panel"><div class="panel-head"><h2>Sekolah Perlu Perhatian</h2><a href="sekolah.html">Lihat semua</a></div><div class="low-list" id="lowCompleteness"></div></article>
+      </section>
+    </main>
+  </div>
+  <script src="assets/js/dinas.js"></script>
+</body>
+</html>

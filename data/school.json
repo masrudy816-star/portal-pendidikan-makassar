@@ -1,0 +1,1368 @@
+{
+  "schoolId": "sman1-makassar",
+  "npsn": "40307334",
+  "educationLevel": "SMA",
+  "district": "Bontoala",
+  "accreditation": "A",
+  "websiteStatus": "active",
+  "schoolName": "SMA Negeri 16 Makassar",
+  "shortName": "SMAN 16 Makassar",
+  "tagline": "Sekolah Unggul, Berkarakter, dan Berbudaya Makassar",
+  "address": "Jl. Amanagappa No.8, Baru, Kec. Ujung Pandang, Kota Makassar, Sulawesi Selatan 90115",
+  "phone": "(0411) 3610435",
+  "whatsapp": "0812-3456-7890",
+  "email": "sman1_mks@yahoo.co.id",
+  "serviceHours": "Senin - Jumat, 07.30 - 15.30 WITA",
+  "whatsappUrl": "https://wa.me/6281234567890",
+  "logo": "assets/img/uploads/1781311426246-logo-of-ministry-of-education-and-culture-of-republic-of-indonesia-svg.png",
+  "principalPhoto": "assets/img/uploads/1781312707678-chatgpt-image-13-jun-2026-08-57-32-3.png",
+  "principalName": "Drs. Dian Muhammad Rudi, M.Pd.",
+  "principalPosition": "Kepala Sekolah",
+  "principalMessage": "Selamat datang di website resmi sekolah kami. Website ini hadir sebagai media informasi, komunikasi, dan layanan bagi peserta didik, orang tua, alumni, serta masyarakat. Mari bersama mewujudkan lingkungan belajar yang unggul, berkarakter, adaptif, dan tetap berakar pada budaya Makassar.",
+  "admissionUrl": "ppdb.html",
+  "mapEmbedUrl": "https://maps.app.goo.gl/aoPYAXr1sMSnSRibA",
+  "heroImages": [
+    "assets/img/uploads/1781311284398-chatgpt-image-13-jun-2026-08-41-03-2.png",
+    "assets/img/uploads/1781311294387-chatgpt-image-13-jun-2026-08-41-03-1.png",
+    "assets/img/uploads/1781311302729-chatgpt-image-13-jun-2026-08-41-04-3.png",
+    "assets/img/uploads/1781311312107-chatgpt-image-13-jun-2026-08-41-04-4.png",
+    "assets/img/uploads/1781311329037-chatgpt-image-13-jun-2026-08-41-04-5.png"
+  ],
+  "socialMedia": {
+    "instagram": "#",
+    "facebook": "https://www.facebook.com/profile.php?id=100079933522104",
+    "youtube": "#",
+    "tiktok": "#",
+    "twitter": "#",
+    "linkedin": "#"
+  },
+  "services": [
+    {
+      "title": "PPDB Online",
+      "icon": "fa-user-graduate",
+      "url": "ppdb.html"
+    },
+    {
+      "title": "Pengumuman",
+      "icon": "fa-bullhorn",
+      "url": "berita.html"
+    },
+    {
+      "title": "E-Learning",
+      "icon": "fa-laptop-code",
+      "url": "e-learning.html"
+    },
+    {
+      "title": "E-Rapor",
+      "icon": "fa-file-lines",
+      "url": "e-rapor.html"
+    },
+    {
+      "title": "Perpustakaan",
+      "icon": "fa-book-open",
+      "url": "perpustakaan.html"
+    },
+    {
+      "title": "Jadwal Pelajaran",
+      "icon": "fa-calendar-days",
+      "url": "jadwal.html"
+    },
+    {
+      "title": "Unduh Dokumen",
+      "icon": "fa-download",
+      "url": "unduhan.html"
+    },
+    {
+      "title": "Hubungi Kami",
+      "icon": "fa-headset",
+      "url": "#kontak"
+    }
+  ],
+  "visionMission": {
+    "vision": "Menjadi sekolah unggul yang menghasilkan lulusan berkarakter, berprestasi, adaptif terhadap perkembangan teknologi, dan berbudaya Makassar.",
+    "missions": [
+      "Menyelenggarakan pembelajaran aktif, kreatif, dan berpusat pada peserta didik.",
+      "Menguatkan karakter pelajar Pancasila, budaya literasi, dan kedisiplinan warga sekolah.",
+      "Mengembangkan prestasi akademik dan non-akademik melalui pembinaan berkelanjutan.",
+      "Mengintegrasikan teknologi digital dalam layanan dan proses pembelajaran.",
+      "Melestarikan nilai budaya lokal Makassar dalam lingkungan sekolah."
+    ],
+    "values": [
+      "Religius",
+      "Integritas",
+      "Kolaboratif",
+      "Berprestasi",
+      "Berbudaya"
+    ]
+  },
+  "featuredInfo": [
+    {
+      "label": "Profil Sekolah",
+      "title": "Sarana dan Prasarana",
+      "description": "Lihat ruang kelas, laboratorium, perpustakaan, lapangan, dan fasilitas penunjang belajar yang dimiliki sekolah.",
+      "icon": "fa-school-flag",
+      "image": "assets/img/fasilitas/fasilitas-source.png",
+      "url": "fasilitas.html",
+      "cta": "Lihat fasilitas"
+    },
+    {
+      "label": "Kesiswaan",
+      "title": "Ekstrakurikuler",
+      "description": "Kenali pilihan kegiatan siswa untuk minat, bakat, kepemimpinan, dan pembinaan karakter.",
+      "icon": "fa-people-group",
+      "image": "assets/img/ekstrakurikuler/ekstrakurikuler-source.png",
+      "url": "ekstrakurikuler.html",
+      "cta": "Lihat ekskul"
+    }
+  ],
+  "innerPage": {
+    "kicker": "Informasi Publik",
+    "title": "Contoh Layout Halaman Dalam",
+    "description": "Pola halaman untuk SPP, PPDB, pengumuman resmi, direktori guru, dan informasi publik sekolah.",
+    "contentTitle": "Direktori Guru dan Tenaga Kependidikan",
+    "contentIntro": "Informasi penting sekolah disajikan ringkas agar mudah diakses oleh siswa, orang tua, dan masyarakat.",
+    "highlights": [
+      {
+        "title": "SPP dan Administrasi",
+        "icon": "fa-wallet",
+        "description": "Informasi pembayaran, tata cara, dan kanal layanan administrasi sekolah."
+      },
+      {
+        "title": "PPDB / SPMB",
+        "icon": "fa-user-plus",
+        "description": "Jalur pendaftaran, persyaratan, jadwal, dokumen, dan kontak bantuan."
+      },
+      {
+        "title": "Direktori GTK",
+        "icon": "fa-id-card-clip",
+        "description": "Direktori guru dan tenaga kependidikan sekolah."
+      }
+    ]
+  },
+  "sidebar": {
+    "quickLinks": [
+      {
+        "title": "PPDB / SPMB Online",
+        "icon": "fa-user-graduate",
+        "url": "ppdb.html"
+      },
+      {
+        "title": "Sarana dan Prasarana",
+        "icon": "fa-school-flag",
+        "url": "fasilitas.html"
+      },
+      {
+        "title": "Ekstrakurikuler",
+        "icon": "fa-people-group",
+        "url": "ekstrakurikuler.html"
+      },
+      {
+        "title": "Informasi SPP",
+        "icon": "fa-money-bill-wave",
+        "url": "spp.html"
+      },
+      {
+        "title": "Direktori Guru dan TU",
+        "icon": "fa-users-gear",
+        "url": "direktori-guru.html"
+      },
+      {
+        "title": "Permohonan Informasi",
+        "icon": "fa-file-signature",
+        "url": "layanan.html"
+      },
+      {
+        "title": "E-Perpustakaan",
+        "icon": "fa-book-open",
+        "url": "layanan.html"
+      }
+    ],
+    "downloads": [
+      {
+        "title": "Formulir PPDB",
+        "type": "PDF",
+        "url": "assets/docs/formulir-ppdb.pdf"
+      },
+      {
+        "title": "Kalender Akademik",
+        "type": "PDF",
+        "url": "assets/docs/kalender-akademik.pdf"
+      },
+      {
+        "title": "SOP Layanan Informasi",
+        "type": "DOC",
+        "url": "assets/docs/sop-layanan-informasi.doc"
+      }
+    ]
+  },
+  "pages": {
+    "spp": {
+      "banner": {
+        "kicker": "Layanan Keuangan",
+        "title": "Informasi SPP",
+        "description": "Halaman ringkas untuk pembayaran, alur administrasi, dan bantuan layanan keuangan sekolah.",
+        "actions": [
+          {
+            "label": "Hubungi Sekolah",
+            "url": "https://wa.me/6281234567890",
+            "variant": "button-accent"
+          },
+          {
+            "label": "Kembali ke Beranda",
+            "url": "index.html",
+            "variant": "button-outline"
+          }
+        ]
+      },
+      "highlights": [
+        {
+          "icon": "fa-shield-halved",
+          "title": "Pembayaran Aman",
+          "description": "Alur pembayaran disusun agar jelas, terpantau, dan mudah dipahami orang tua."
+        },
+        {
+          "icon": "fa-calendar-check",
+          "title": "Jadwal Fleksibel",
+          "description": "Informasi tenggat dan jadwal pembayaran ditampilkan secara terstruktur."
+        },
+        {
+          "icon": "fa-file-circle-check",
+          "title": "Transparan",
+          "description": "Rincian layanan keuangan disajikan jelas untuk orang tua dan siswa."
+        }
+      ],
+      "blocks": [
+        {
+          "title": "Cara Pembayaran SPP",
+          "type": "steps",
+          "items": [
+            "Masuk ke portal layanan sekolah atau hubungi petugas sekolah.",
+            "Siapkan data siswa dan bukti pembayaran yang diperlukan.",
+            "Ikuti instruksi petugas atau tautan pembayaran resmi.",
+            "Simpan bukti transaksi untuk arsip dan verifikasi."
+          ]
+        },
+        {
+          "title": "Keuntungan Layanan",
+          "type": "list",
+          "items": [
+            "Informasi biaya lebih jelas dan mudah dipahami.",
+            "Membantu orang tua memahami alur layanan administrasi sekolah.",
+            "Mendukung layanan pembayaran yang lebih tertib dan transparan.",
+            "Mendukung keterlacakan transaksi dan laporan."
+          ]
+        },
+        {
+          "title": "Bantuan Cepat",
+          "type": "list",
+          "badge": "Butuh Bantuan?",
+          "items": [
+            "Hubungi sekolah melalui WhatsApp atau telepon.",
+            "Siapkan nama siswa, kelas, dan detail pertanyaan.",
+            "Pastikan bukti pembayaran tersimpan dengan baik."
+          ]
+        }
+      ]
+    },
+    "profil": {
+      "banner": {
+        "kicker": "Profil Sekolah",
+        "title": "Profil SMA Negeri 1 Makassar",
+        "description": "Informasi umum sekolah, identitas, layanan, dan komitmen pendidikan.",
+        "actions": [
+          {
+            "label": "Lihat Visi Misi",
+            "url": "visi-misi.html",
+            "variant": "button-accent"
+          },
+          {
+            "label": "Sejarah Sekolah",
+            "url": "sejarah.html",
+            "variant": "button-outline"
+          }
+        ]
+      },
+      "highlights": [
+        {
+          "icon": "fa-school",
+          "title": "Identitas Sekolah",
+          "description": "Informasi identitas sekolah ditampilkan secara ringkas dan resmi."
+        },
+        {
+          "icon": "fa-award",
+          "title": "Sekolah Unggul",
+          "description": "Menonjolkan prestasi, program unggulan, dan layanan publik."
+        },
+        {
+          "icon": "fa-city",
+          "title": "Kota Makassar",
+          "description": "Nuansa portal resmi yang cocok untuk sekolah di Kota Makassar."
+        }
+      ],
+      "blocks": [
+        {
+          "title": "Sambutan Kepala Sekolah",
+          "type": "text",
+          "text": "Selamat datang di website resmi sekolah kami. Website ini hadir sebagai media informasi, komunikasi, dan layanan bagi peserta didik, orang tua, alumni, serta masyarakat."
+        },
+        {
+          "title": "Tentang Sekolah",
+          "type": "list",
+          "items": [
+            "SMA Negeri 1 Makassar berkomitmen menghadirkan layanan pendidikan yang unggul, adaptif, dan berkarakter.",
+            "Informasi sekolah disajikan secara terbuka untuk siswa, orang tua, alumni, dan masyarakat.",
+            "Website ini menjadi kanal resmi publikasi informasi dan layanan sekolah."
+          ]
+        },
+        {
+          "title": "Layanan Informasi",
+          "type": "list",
+          "items": [
+            "Profil, visi misi, dan sejarah sekolah.",
+            "Berita, agenda, prestasi, dan galeri kegiatan.",
+            "PPDB, SPP, direktori GTK, dan layanan administrasi."
+          ]
+        }
+      ]
+    },
+    "visiMisi": {
+      "banner": {
+        "kicker": "Profil Sekolah",
+        "title": "Visi dan Misi",
+        "description": "Arah pengembangan sekolah sebagai pusat pembelajaran unggul, berkarakter, dan berbudaya.",
+        "actions": [
+          {
+            "label": "Lihat Profil",
+            "url": "profil.html",
+            "variant": "button-accent"
+          },
+          {
+            "label": "Kembali ke Beranda",
+            "url": "index.html",
+            "variant": "button-outline"
+          }
+        ]
+      },
+      "highlights": [
+        {
+          "icon": "fa-eye",
+          "title": "Visi",
+          "description": "Arah besar sekolah untuk membangun lulusan unggul."
+        },
+        {
+          "icon": "fa-list-check",
+          "title": "Misi",
+          "description": "Langkah strategis sekolah dalam pembelajaran dan layanan."
+        },
+        {
+          "icon": "fa-heart",
+          "title": "Nilai",
+          "description": "Karakter utama yang dibangun pada seluruh warga sekolah."
+        }
+      ],
+      "blocks": [
+        {
+          "title": "Visi Sekolah",
+          "type": "list",
+          "items": [
+            "Menjadi sekolah unggul yang menghasilkan lulusan berkarakter, berprestasi, adaptif terhadap perkembangan teknologi, dan berbudaya Makassar."
+          ]
+        },
+        {
+          "title": "Misi Sekolah",
+          "type": "list",
+          "items": [
+            "Menyelenggarakan pembelajaran aktif, kreatif, dan berpusat pada peserta didik.",
+            "Menguatkan karakter pelajar Pancasila, budaya literasi, dan kedisiplinan warga sekolah.",
+            "Mengembangkan prestasi akademik dan non-akademik melalui pembinaan berkelanjutan.",
+            "Mengintegrasikan teknologi digital dalam layanan dan proses pembelajaran.",
+            "Melestarikan nilai budaya lokal Makassar dalam lingkungan sekolah."
+          ]
+        },
+        {
+          "title": "Nilai Utama",
+          "type": "list",
+          "items": [
+            "Religius",
+            "Integritas",
+            "Kolaboratif",
+            "Berprestasi",
+            "Berbudaya"
+          ]
+        }
+      ]
+    },
+    "sejarah": {
+      "banner": {
+        "kicker": "Profil Sekolah",
+        "title": "Sejarah Sekolah",
+        "description": "Ringkasan perjalanan sekolah dan perkembangan layanan pendidikan.",
+        "actions": [
+          {
+            "label": "Lihat Visi Misi",
+            "url": "visi-misi.html",
+            "variant": "button-accent"
+          }
+        ]
+      },
+      "highlights": [
+        {
+          "icon": "fa-landmark",
+          "title": "Identitas",
+          "description": "Sekolah bertumbuh bersama masyarakat dan kota."
+        },
+        {
+          "icon": "fa-book",
+          "title": "Pembelajaran",
+          "description": "Penguatan akademik dan karakter menjadi fokus utama."
+        },
+        {
+          "icon": "fa-chart-line",
+          "title": "Perkembangan",
+          "description": "Layanan digital menjadi bagian dari transformasi sekolah."
+        }
+      ],
+      "blocks": [
+        {
+          "title": "Perjalanan Sekolah",
+          "type": "timeline",
+          "items": [
+            {
+              "label": "Awal Berdiri",
+              "text": "Sekolah hadir untuk menyediakan pendidikan menengah berkualitas bagi masyarakat."
+            },
+            {
+              "label": "Penguatan Mutu",
+              "text": "Program akademik, kesiswaan, dan budaya sekolah terus dikembangkan."
+            },
+            {
+              "label": "Transformasi Digital",
+              "text": "Website sekolah menjadi media informasi, layanan, dan komunikasi resmi."
+            }
+          ]
+        }
+      ]
+    },
+    "ppdb": {
+      "banner": {
+        "kicker": "Penerimaan Murid Baru",
+        "title": "PPDB / SPMB",
+        "description": "Contoh halaman pendaftaran baru yang berisi jalur masuk, persyaratan, dan bantuan pendaftaran.",
+        "actions": [
+          {
+            "label": "Daftar Sekarang",
+            "url": "ppdb.html",
+            "variant": "button-accent"
+          },
+          {
+            "label": "Unduh Panduan",
+            "url": "layanan.html",
+            "variant": "button-outline"
+          }
+        ]
+      },
+      "highlights": [
+        {
+          "icon": "fa-route",
+          "title": "Jalur Pendaftaran",
+          "description": "Reguler, afirmasi, beasiswa, atau jalur lain dapat diatur sesuai kebutuhan sekolah."
+        },
+        {
+          "icon": "fa-id-card",
+          "title": "Administrasi",
+          "description": "Syarat umum dan khusus disusun agar mudah dibaca oleh calon peserta didik."
+        },
+        {
+          "icon": "fa-headset",
+          "title": "Call Center",
+          "description": "Sediakan kanal bantuan agar pendaftar tidak bingung saat proses berlangsung."
+        }
+      ],
+      "blocks": [
+        {
+          "title": "Jalur Pendaftaran",
+          "type": "list",
+          "items": [
+            "Jalur Reguler untuk pendaftar umum.",
+            "Jalur B2P atau bantuan biaya pendidikan.",
+            "Jalur Beasiswa bagi calon peserta didik berprestasi atau kategori khusus."
+          ]
+        },
+        {
+          "title": "Tahapan Pendaftaran",
+          "type": "steps",
+          "items": [
+            "Buat akun dan isi data calon peserta didik.",
+            "Unggah dokumen administratif yang diminta.",
+            "Verifikasi berkas sesuai jadwal sekolah.",
+            "Ikuti seleksi dan pantau hasil pengumuman."
+          ]
+        },
+        {
+          "title": "Dokumen Umum",
+          "type": "list",
+          "items": [
+            "Akte kelahiran dan Kartu Keluarga.",
+            "Pas foto ukuran resmi.",
+            "Rapor atau dokumen akademik yang diminta.",
+            "Surat pernyataan atau dokumen tambahan sesuai jalur."
+          ]
+        },
+        {
+          "title": "Catatan Penting",
+          "type": "timeline",
+          "items": [
+            {
+              "label": "Tanggal",
+              "text": "Sesuaikan dengan kalender akademik sekolah."
+            },
+            {
+              "label": "Bantuan",
+              "text": "Sediakan nomor WhatsApp atau call center aktif."
+            },
+            {
+              "label": "Pengumuman",
+              "text": "Gunakan halaman berita untuk hasil dan informasi lanjutan."
+            }
+          ]
+        }
+      ]
+    },
+    "direktori": {
+      "banner": {
+        "kicker": "Direktori GTK",
+        "title": "Guru dan Tenaga Kependidikan",
+        "description": "Informasi guru dan tenaga kependidikan sekolah yang disajikan secara ringkas dan mudah dicari.",
+        "actions": [
+          {
+            "label": "Lihat Beranda",
+            "url": "index.html",
+            "variant": "button-accent"
+          },
+          {
+            "label": "Kontak Sekolah",
+            "url": "index.html#kontak",
+            "variant": "button-outline"
+          }
+        ]
+      },
+      "highlights": [
+        {
+          "icon": "fa-id-badge",
+          "title": "Data GTK",
+          "description": "Informasi guru dan tenaga kependidikan disajikan ringkas agar mudah dikenali oleh siswa dan orang tua."
+        },
+        {
+          "icon": "fa-people-group",
+          "title": "Struktur Sekolah",
+          "description": "Menampilkan kepala sekolah, wakil kepala sekolah, guru, dan tenaga kependidikan sesuai data resmi sekolah."
+        },
+        {
+          "icon": "fa-image-portrait",
+          "title": "Foto Profil",
+          "description": "Foto membantu pengunjung mengenal warga sekolah secara lebih dekat."
+        }
+      ],
+      "blocks": [
+        {
+          "title": "Informasi Direktori",
+          "type": "list",
+          "items": [
+            "Daftar guru dan tenaga kependidikan ditampilkan sebagai informasi resmi sekolah.",
+            "Data jabatan membantu siswa dan orang tua mengenal peran masing-masing GTK.",
+            "Pembaruan data dilakukan secara berkala oleh pihak sekolah."
+          ]
+        },
+        {
+          "title": "Layanan Terkait",
+          "type": "list",
+          "items": [
+            "Orang tua dapat menghubungi sekolah untuk informasi akademik dan administrasi.",
+            "Siswa dapat mengenal guru dan tenaga kependidikan yang mendukung kegiatan belajar.",
+            "Informasi ini menjadi bagian dari transparansi layanan sekolah."
+          ]
+        }
+      ],
+      "showTeachers": true
+    },
+    "fasilitas": {
+      "banner": {
+        "kicker": "Profil Sekolah",
+        "title": "Sarana dan Prasarana",
+        "description": "Kumpulan fasilitas sekolah yang ditampilkan dengan foto dan penjelasan singkat agar mudah dipahami orang tua dan siswa.",
+        "actions": [
+          {
+            "label": "Lihat Ekstrakurikuler",
+            "url": "ekstrakurikuler.html",
+            "variant": "button-accent"
+          },
+          {
+            "label": "Kembali ke Beranda",
+            "url": "index.html",
+            "variant": "button-outline"
+          }
+        ]
+      },
+      "highlights": [],
+      "facilityStats": [
+        {
+          "label": "Lapangan",
+          "value": "2",
+          "icon": "fa-futbol"
+        },
+        {
+          "label": "Mushola",
+          "value": "1",
+          "icon": "fa-mosque"
+        },
+        {
+          "label": "Toilet",
+          "value": "10",
+          "icon": "fa-restroom"
+        },
+        {
+          "label": "Laboratorium",
+          "value": "4",
+          "icon": "fa-flask"
+        },
+        {
+          "label": "Perpustakaan",
+          "value": "1",
+          "icon": "fa-book-open"
+        },
+        {
+          "label": "Ruang Kelas",
+          "value": "30",
+          "icon": "fa-chalkboard"
+        }
+      ],
+      "showFeatureCards": true,
+      "galleryStyle": "photo-grid",
+      "featureCards": [
+        {
+          "label": "Fasilitas Olahraga",
+          "title": "Lapangan Indoor",
+          "description": "Lapangan serbaguna untuk basket, olahraga, dan kegiatan siswa.",
+          "image": "assets/img/fasilitas/fasilitas-source.png",
+          "positionClass": "facility-position-top-left"
+        },
+        {
+          "label": "Fasilitas Akademik",
+          "title": "Laboratorium IPA",
+          "description": "Ruang praktik sains dengan meja eksperimen dan peralatan pembelajaran.",
+          "image": "assets/img/fasilitas/fasilitas-source.png",
+          "positionClass": "facility-position-top-center"
+        },
+        {
+          "label": "Fasilitas Pembelajaran",
+          "title": "Ruang Kelas",
+          "description": "Kelas terang dan nyaman untuk kegiatan belajar yang aktif dan interaktif.",
+          "image": "assets/img/fasilitas/fasilitas-source.png",
+          "positionClass": "facility-position-top-right"
+        },
+        {
+          "label": "Fasilitas Literasi",
+          "title": "Perpustakaan",
+          "description": "Ruang baca modern dengan koleksi buku dan area belajar bersama.",
+          "image": "assets/img/fasilitas/fasilitas-source.png",
+          "positionClass": "facility-position-bottom-left"
+        },
+        {
+          "label": "Fasilitas Teknologi",
+          "title": "Laboratorium Komputer",
+          "description": "Perangkat komputer untuk pembelajaran digital dan pengembangan keterampilan teknologi.",
+          "image": "assets/img/fasilitas/fasilitas-source.png",
+          "positionClass": "facility-position-bottom-center"
+        },
+        {
+          "label": "Lingkungan Sekolah",
+          "title": "Gedung Sekolah",
+          "description": "Area sekolah yang tertata, hijau, dan mendukung kenyamanan warga sekolah.",
+          "image": "assets/img/fasilitas/fasilitas-source.png",
+          "positionClass": "facility-position-bottom-right"
+        }
+      ],
+      "blocks": []
+    },
+    "ekstrakurikuler": {
+      "banner": {
+        "kicker": "Kesiswaan",
+        "title": "Ekstrakurikuler",
+        "description": "Pilihan kegiatan siswa untuk mengembangkan minat, bakat, kepemimpinan, dan karakter.",
+        "actions": [
+          {
+            "label": "Lihat Fasilitas",
+            "url": "fasilitas.html",
+            "variant": "button-accent"
+          },
+          {
+            "label": "Kembali ke Beranda",
+            "url": "index.html",
+            "variant": "button-outline"
+          }
+        ]
+      },
+      "highlights": [],
+      "showFeatureCards": true,
+      "galleryStyle": "photo-grid",
+      "featureCards": [
+        {
+          "label": "Wajib",
+          "title": "Pramuka",
+          "description": "Membentuk kemandirian, kedisiplinan, dan jiwa kepemimpinan siswa.",
+          "image": "assets/img/ekstrakurikuler/ekstrakurikuler-source.png",
+          "positionClass": "facility-position-top-left"
+        },
+        {
+          "label": "Prestasi",
+          "title": "Paskibra",
+          "description": "Mengasah ketegasan, tanggung jawab, dan kebanggaan pada upacara resmi.",
+          "image": "assets/img/ekstrakurikuler/ekstrakurikuler-source.png",
+          "positionClass": "facility-position-top-center"
+        },
+        {
+          "label": "Kesehatan",
+          "title": "PMR dan UKS",
+          "description": "Membina kepedulian sosial, kesehatan, dan kesiapsiagaan siswa.",
+          "image": "assets/img/ekstrakurikuler/ekstrakurikuler-source.png",
+          "positionClass": "facility-position-top-right"
+        },
+        {
+          "label": "Seni Budaya",
+          "title": "Seni Tari",
+          "description": "Ruang ekspresi siswa untuk melestarikan budaya dan melatih kepercayaan diri.",
+          "image": "assets/img/ekstrakurikuler/ekstrakurikuler-source.png",
+          "positionClass": "facility-position-bottom-left"
+        },
+        {
+          "label": "Olahraga",
+          "title": "Futsal dan Basket",
+          "description": "Kegiatan olahraga untuk kebugaran, kerja sama, dan sportivitas siswa.",
+          "image": "assets/img/ekstrakurikuler/ekstrakurikuler-source.png",
+          "positionClass": "facility-position-bottom-center"
+        },
+        {
+          "label": "Sains Teknologi",
+          "title": "Robotik dan Karya Ilmiah",
+          "description": "Wadah inovasi siswa dalam riset, teknologi, dan pemecahan masalah.",
+          "image": "assets/img/ekstrakurikuler/ekstrakurikuler-source.png",
+          "positionClass": "facility-position-bottom-right"
+        }
+      ],
+      "blocks": []
+    },
+    "berita": {
+      "banner": {
+        "kicker": "Informasi Sekolah",
+        "title": "Berita dan Pengumuman",
+        "description": "Kumpulan berita terbaru, pengumuman, prestasi, dan kegiatan sekolah.",
+        "actions": [
+          {
+            "label": "Lihat PPDB",
+            "url": "ppdb.html",
+            "variant": "button-accent"
+          }
+        ]
+      },
+      "highlights": [
+        {
+          "icon": "fa-bullhorn",
+          "title": "Pengumuman",
+          "description": "Informasi resmi sekolah untuk siswa dan orang tua."
+        },
+        {
+          "icon": "fa-newspaper",
+          "title": "Berita",
+          "description": "Publikasi kegiatan dan capaian sekolah."
+        },
+        {
+          "icon": "fa-calendar-days",
+          "title": "Agenda",
+          "description": "Jadwal kegiatan akademik dan kesiswaan."
+        }
+      ],
+      "showNews": true
+    },
+    "galeri": {
+      "banner": {
+        "kicker": "Dokumentasi",
+        "title": "Galeri Kegiatan",
+        "description": "Dokumentasi visual kegiatan belajar, ekstrakurikuler, budaya, dan prestasi sekolah.",
+        "actions": [
+          {
+            "label": "Lihat Berita",
+            "url": "berita.html",
+            "variant": "button-accent"
+          }
+        ]
+      },
+      "highlights": [
+        {
+          "icon": "fa-camera",
+          "title": "Dokumentasi",
+          "description": "Foto kegiatan sekolah tersusun rapi."
+        },
+        {
+          "icon": "fa-users",
+          "title": "Kegiatan",
+          "description": "Menampilkan suasana pembelajaran dan kesiswaan."
+        },
+        {
+          "icon": "fa-trophy",
+          "title": "Prestasi",
+          "description": "Ruang untuk menonjolkan capaian sekolah."
+        }
+      ],
+      "showGallery": true
+    },
+    "layanan": {
+      "banner": {
+        "kicker": "Layanan Sekolah",
+        "title": "Pusat Layanan",
+        "description": "Daftar layanan digital dan administrasi sekolah yang dapat diakses oleh warga sekolah.",
+        "actions": [
+          {
+            "label": "Hubungi Sekolah",
+            "url": "index.html#kontak",
+            "variant": "button-accent"
+          }
+        ]
+      },
+      "highlights": [
+        {
+          "icon": "fa-laptop-code",
+          "title": "E-Learning",
+          "description": "Akses pembelajaran digital dan materi kelas."
+        },
+        {
+          "icon": "fa-file-lines",
+          "title": "E-Rapor",
+          "description": "Informasi nilai dan laporan hasil belajar."
+        },
+        {
+          "icon": "fa-download",
+          "title": "Unduhan",
+          "description": "Dokumen penting sekolah dan administrasi."
+        }
+      ],
+      "blocks": [
+        {
+          "title": "Daftar Layanan",
+          "type": "serviceCards",
+          "items": [
+            {
+              "title": "PPDB / SPMB Online",
+              "description": "Informasi pendaftaran peserta didik baru, persyaratan, jadwal, dan alur layanan.",
+              "icon": "fa-user-graduate",
+              "url": "ppdb.html",
+              "cta": "Buka PPDB"
+            },
+            {
+              "title": "Pengumuman Sekolah",
+              "description": "Berita, pengumuman resmi, agenda, dan informasi terbaru dari sekolah.",
+              "icon": "fa-bullhorn",
+              "url": "berita.html",
+              "cta": "Lihat pengumuman"
+            },
+            {
+              "title": "E-Learning",
+              "description": "Akses informasi pembelajaran digital, materi kelas, dan kanal belajar siswa.",
+              "icon": "fa-laptop-code",
+              "url": "e-learning.html",
+              "cta": "Buka E-Learning"
+            },
+            {
+              "title": "E-Rapor",
+              "description": "Informasi akses rapor digital, laporan hasil belajar, dan panduan orang tua.",
+              "icon": "fa-file-lines",
+              "url": "e-rapor.html",
+              "cta": "Buka E-Rapor"
+            },
+            {
+              "title": "Perpustakaan Digital",
+              "description": "Layanan literasi, katalog bacaan, referensi belajar, dan akses perpustakaan sekolah.",
+              "icon": "fa-book-open",
+              "url": "perpustakaan.html",
+              "cta": "Buka perpustakaan"
+            },
+            {
+              "title": "Jadwal Pelajaran",
+              "description": "Informasi jadwal pelajaran, kalender akademik, dan kegiatan pembelajaran.",
+              "icon": "fa-calendar-days",
+              "url": "jadwal.html",
+              "cta": "Lihat jadwal"
+            },
+            {
+              "title": "Unduh Dokumen",
+              "description": "Kumpulan dokumen sekolah seperti formulir PPDB, kalender akademik, dan SOP layanan.",
+              "icon": "fa-download",
+              "url": "unduhan.html",
+              "cta": "Buka unduhan"
+            },
+            {
+              "title": "Layanan Kontak Sekolah",
+              "description": "Kanal kontak resmi untuk pertanyaan informasi, administrasi, dan layanan publik sekolah.",
+              "icon": "fa-headset",
+              "url": "index.html#kontak",
+              "cta": "Hubungi sekolah"
+            }
+          ]
+        },
+        {
+          "title": "Cara Menggunakan",
+          "type": "steps",
+          "items": [
+            "Pilih layanan yang dibutuhkan.",
+            "Baca informasi dan persyaratan pada halaman terkait.",
+            "Hubungi petugas sekolah bila membutuhkan bantuan."
+          ]
+        }
+      ]
+    },
+    "e-learning": {
+      "banner": {
+        "kicker": "Layanan Digital",
+        "title": "E-Learning",
+        "description": "Informasi pembelajaran digital, materi kelas, dan kanal belajar yang dapat digunakan siswa.",
+        "actions": [
+          {
+            "label": "Kembali ke Layanan",
+            "url": "layanan.html",
+            "variant": "button-accent"
+          },
+          {
+            "label": "Hubungi Sekolah",
+            "url": "index.html#kontak",
+            "variant": "button-outline"
+          }
+        ]
+      },
+      "highlights": [
+        {
+          "icon": "fa-laptop-code",
+          "title": "Materi Digital",
+          "description": "Siswa dapat memperoleh informasi pembelajaran dan materi kelas."
+        },
+        {
+          "icon": "fa-chalkboard-user",
+          "title": "Pembelajaran Terarah",
+          "description": "Guru dapat membagikan arahan belajar melalui kanal resmi sekolah."
+        },
+        {
+          "icon": "fa-headset",
+          "title": "Bantuan Akses",
+          "description": "Siswa dapat menghubungi sekolah jika membutuhkan bantuan layanan."
+        }
+      ],
+      "blocks": [
+        {
+          "title": "Informasi E-Learning",
+          "type": "list",
+          "items": [
+            "Gunakan akun belajar atau akun yang diberikan sekolah untuk mengakses layanan pembelajaran.",
+            "Materi dan tugas mengikuti arahan guru mata pelajaran masing-masing.",
+            "Pastikan siswa mengikuti jadwal dan ketentuan pembelajaran yang berlaku."
+          ]
+        }
+      ]
+    },
+    "e-rapor": {
+      "banner": {
+        "kicker": "Layanan Akademik",
+        "title": "E-Rapor",
+        "description": "Informasi akses rapor digital dan laporan hasil belajar peserta didik.",
+        "actions": [
+          {
+            "label": "Kembali ke Layanan",
+            "url": "layanan.html",
+            "variant": "button-accent"
+          },
+          {
+            "label": "Hubungi Sekolah",
+            "url": "index.html#kontak",
+            "variant": "button-outline"
+          }
+        ]
+      },
+      "highlights": [
+        {
+          "icon": "fa-file-lines",
+          "title": "Nilai Siswa",
+          "description": "Informasi hasil belajar disampaikan melalui layanan resmi sekolah."
+        },
+        {
+          "icon": "fa-user-shield",
+          "title": "Akses Terbatas",
+          "description": "Data akademik hanya dapat diakses oleh pihak yang berwenang."
+        },
+        {
+          "icon": "fa-circle-question",
+          "title": "Bantuan",
+          "description": "Hubungi sekolah jika membutuhkan bantuan akses atau informasi rapor."
+        }
+      ],
+      "blocks": [
+        {
+          "title": "Panduan Singkat",
+          "type": "steps",
+          "items": [
+            "Siapkan akun siswa atau informasi akses yang diberikan sekolah.",
+            "Masuk ke layanan E-Rapor sesuai arahan wali kelas.",
+            "Hubungi sekolah jika terdapat kendala akses atau data."
+          ]
+        }
+      ]
+    },
+    "perpustakaan": {
+      "banner": {
+        "kicker": "Layanan Literasi",
+        "title": "Perpustakaan Digital",
+        "description": "Informasi layanan literasi, katalog bacaan, dan referensi belajar sekolah.",
+        "actions": [
+          {
+            "label": "Kembali ke Layanan",
+            "url": "layanan.html",
+            "variant": "button-accent"
+          },
+          {
+            "label": "Lihat Galeri",
+            "url": "galeri.html",
+            "variant": "button-outline"
+          }
+        ]
+      },
+      "highlights": [
+        {
+          "icon": "fa-book-open",
+          "title": "Katalog Bacaan",
+          "description": "Informasi koleksi dan bahan bacaan pendukung pembelajaran."
+        },
+        {
+          "icon": "fa-book-atlas",
+          "title": "Referensi Belajar",
+          "description": "Sumber belajar untuk mendukung literasi siswa."
+        },
+        {
+          "icon": "fa-clock",
+          "title": "Layanan Sekolah",
+          "description": "Akses layanan mengikuti jam operasional dan ketentuan sekolah."
+        }
+      ],
+      "blocks": [
+        {
+          "title": "Layanan Perpustakaan",
+          "type": "list",
+          "items": [
+            "Katalog buku dan bahan bacaan sekolah.",
+            "Referensi belajar untuk siswa dan guru.",
+            "Informasi peminjaman mengikuti ketentuan perpustakaan sekolah."
+          ]
+        }
+      ]
+    },
+    "jadwal": {
+      "banner": {
+        "kicker": "Layanan Akademik",
+        "title": "Jadwal Pelajaran",
+        "description": "Informasi jadwal pelajaran, kalender akademik, dan agenda pembelajaran sekolah.",
+        "actions": [
+          {
+            "label": "Kembali ke Layanan",
+            "url": "layanan.html",
+            "variant": "button-accent"
+          },
+          {
+            "label": "Unduh Kalender",
+            "url": "assets/docs/kalender-akademik.pdf",
+            "variant": "button-outline"
+          }
+        ]
+      },
+      "highlights": [
+        {
+          "icon": "fa-calendar-days",
+          "title": "Jadwal Kelas",
+          "description": "Informasi jadwal mengikuti pengumuman resmi sekolah."
+        },
+        {
+          "icon": "fa-calendar-check",
+          "title": "Kalender Akademik",
+          "description": "Kegiatan akademik dapat dilihat melalui dokumen kalender sekolah."
+        },
+        {
+          "icon": "fa-bullhorn",
+          "title": "Pengumuman",
+          "description": "Perubahan jadwal akan diinformasikan melalui kanal resmi sekolah."
+        }
+      ],
+      "blocks": [
+        {
+          "title": "Informasi Jadwal",
+          "type": "list",
+          "items": [
+            "Jadwal pelajaran mengikuti ketentuan kurikulum dan kalender akademik sekolah.",
+            "Perubahan jadwal akan diumumkan melalui wali kelas atau kanal resmi sekolah.",
+            "Siswa diharapkan mengikuti pembaruan informasi secara berkala."
+          ]
+        }
+      ]
+    },
+    "unduhan": {
+      "banner": {
+        "kicker": "Dokumen Sekolah",
+        "title": "Unduh Dokumen",
+        "description": "Kumpulan dokumen resmi sekolah yang dapat diunduh oleh siswa, orang tua, dan masyarakat.",
+        "actions": [
+          {
+            "label": "Kembali ke Layanan",
+            "url": "layanan.html",
+            "variant": "button-accent"
+          }
+        ]
+      },
+      "highlights": [
+        {
+          "icon": "fa-file-pdf",
+          "title": "Formulir PPDB",
+          "description": "Dokumen formulir pendaftaran peserta didik baru."
+        },
+        {
+          "icon": "fa-calendar-days",
+          "title": "Kalender Akademik",
+          "description": "Dokumen kalender kegiatan akademik sekolah."
+        },
+        {
+          "icon": "fa-file-word",
+          "title": "SOP Layanan",
+          "description": "Dokumen prosedur layanan informasi sekolah."
+        }
+      ],
+      "blocks": [
+        {
+          "title": "Dokumen Tersedia",
+          "type": "downloads"
+        }
+      ]
+    }
+  },
+  "teachers": [
+    {
+      "name": "Drs. Nama Kepala Sekolah, M.Pd.",
+      "nik": "01*******",
+      "gender": "Laki-laki",
+      "birthPlace": "Makassar",
+      "birthDate": "25 November 1968",
+      "position": "Kepala Sekolah",
+      "photo": "assets/img/uploads/1781312364656-prabowo-subianto-2024-official-portrait.jpg"
+    },
+    {
+      "name": "Dra. Nurhayati, M.Pd.",
+      "nik": "02*******",
+      "gender": "Perempuan",
+      "birthPlace": "Gowa",
+      "birthDate": "05 Juni 1971",
+      "position": "Wakil Kepala Sekolah Bidang Kurikulum",
+      "photo": "assets/img/uploads/1781312380293-chatgpt-image-13-jun-2026-08-57-33-6.png"
+    },
+    {
+      "name": "Muhammad Ridwan, S.Si., M.Pd.",
+      "nik": "03*******",
+      "gender": "Laki-laki",
+      "birthPlace": "Maros",
+      "birthDate": "11 Februari 1975",
+      "position": "Guru Matematika",
+      "photo": "assets/img/uploads/1781312391176-chatgpt-image-13-jun-2026-08-57-15.png"
+    },
+    {
+      "name": "Andi Sulastri, S.Pd.",
+      "nik": "04*******",
+      "gender": "Perempuan",
+      "birthPlace": "Makassar",
+      "birthDate": "20 September 1980",
+      "position": "Guru Bahasa Indonesia",
+      "photo": "assets/img/uploads/1781312405180-chatgpt-image-13-jun-2026-08-57-33-7.png"
+    }
+  ],
+  "statistics": [
+    {
+      "label": "Jumlah Siswa",
+      "value": "1.250+",
+      "icon": "fa-users"
+    },
+    {
+      "label": "Guru & Staf",
+      "value": "85+",
+      "icon": "fa-chalkboard-user"
+    },
+    {
+      "label": "Ekstrakurikuler",
+      "value": "35+",
+      "icon": "fa-people-group"
+    },
+    {
+      "label": "Prestasi",
+      "value": "150+",
+      "icon": "fa-trophy"
+    },
+    {
+      "label": "Fasilitas",
+      "value": "20+",
+      "icon": "fa-building"
+    },
+    {
+      "label": "Kelulusan",
+      "value": "98%",
+      "icon": "fa-graduation-cap"
+    }
+  ],
+  "news": [
+    {
+      "title": "Siswa Meraih Juara Olimpiade Sains Tingkat Kota Makassar",
+      "date": "20 Mei 2026",
+      "category": "Prestasi",
+      "image": "assets/img/uploads/1781413731373-a-berita-olimpiade.png",
+      "excerpt": "Siswa berhasil meraih prestasi membanggakan pada ajang olimpiade sains tingkat Kota Makassar.",
+      "url": "berita.html"
+    },
+    {
+      "title": "Kegiatan Projek Penguatan Profil Pelajar Pancasila",
+      "date": "15 Mei 2026",
+      "category": "Kegiatan",
+      "image": "assets/img/uploads/1781414150090-a.png",
+      "excerpt": "Sekolah melaksanakan kegiatan P5 untuk membentuk karakter, kreativitas, dan kolaborasi siswa.",
+      "url": "berita.html"
+    },
+    {
+      "title": "Informasi Penerimaan Peserta Didik Baru",
+      "date": "10 Mei 2026",
+      "category": "PPDB",
+      "image": "assets/img/berita-3.jpg",
+      "excerpt": "Informasi awal terkait penerimaan peserta didik baru tahun ajaran mendatang.",
+      "url": "ppdb.html"
+    }
+  ],
+  "agenda": [
+    {
+      "date": "27",
+      "month": "MEI",
+      "title": "Upacara Hari Lahir Pancasila",
+      "time": "07.30 WITA",
+      "location": "Lapangan Upacara"
+    },
+    {
+      "date": "31",
+      "month": "MEI",
+      "title": "Rapat Orang Tua / Wali Siswa",
+      "time": "08.00 WITA",
+      "location": "Aula Sekolah"
+    },
+    {
+      "date": "10",
+      "month": "JUN",
+      "title": "Ujian Akhir Semester Genap",
+      "time": "07.30 WITA",
+      "location": "Ruang Kelas"
+    }
+  ],
+  "achievements": [
+    {
+      "title": "Juara 1 Olimpiade Sains Tingkat Kota Makassar",
+      "level": "Kota Makassar",
+      "year": "2026",
+      "image": "assets/img/uploads/1781413261390-antarafoto-ganda-putri-indonesia-raih-emas-olimpiade-020821-sgd-10.jpg",
+      "description": "Prestasi membanggakan yang diraih oleh siswa dalam bidang sains."
+    },
+    {
+      "title": "Juara Lomba Tari Tradisional",
+      "level": "Provinsi Sulawesi Selatan",
+      "year": "2026",
+      "image": "assets/img/uploads/1781413253986-atari-pepe-ri-makka.jpg",
+      "description": "Penguatan budaya lokal melalui penampilan seni tari tradisional."
+    },
+    {
+      "title": "Finalis Karya Ilmiah Remaja",
+      "level": "Nasional",
+      "year": "2025",
+      "image": "assets/img/uploads/1781413492435-akarya-tulis-makassar.jpg",
+      "description": "Inovasi siswa dalam penelitian, lingkungan, dan teknologi tepat guna."
+    },
+    {
+      "title": "Prestasi ",
+      "level": "Tingkat",
+      "year": "2026",
+      "image": "assets/img/uploads/1781413480942-a-prestasi.jpeg",
+      "description": "Deskripsi prestasi."
+    }
+  ],
+  "programs": [
+    {
+      "title": "Digital Learning",
+      "icon": "fa-laptop",
+      "description": "Pembelajaran kreatif dengan dukungan teknologi digital."
+    },
+    {
+      "title": "Literasi dan Numerasi",
+      "icon": "fa-book-open-reader",
+      "description": "Membangun kecakapan membaca, menalar, dan memecahkan masalah."
+    },
+    {
+      "title": "Pembinaan Karakter",
+      "icon": "fa-hand-holding-heart",
+      "description": "Menumbuhkan integritas, disiplin, kepedulian, dan tanggung jawab."
+    },
+    {
+      "title": "Science Club",
+      "icon": "fa-flask",
+      "description": "Ruang eksplorasi sains, riset, dan inovasi bagi peserta didik."
+    },
+    {
+      "title": "Budaya Makassar",
+      "icon": "fa-landmark",
+      "description": "Mengenal dan melestarikan nilai luhur serta budaya lokal."
+    },
+    {
+      "title": "Smart Library",
+      "icon": "fa-book-atlas",
+      "description": "Akses sumber belajar cetak dan digital yang mudah dan nyaman."
+    }
+  ],
+  "gallery": [
+    {
+      "image": "assets/img/uploads/1781397579636-a-belajar.png",
+      "caption": "Kegiatan pembelajaran kolaboratif"
+    },
+    {
+      "image": "assets/img/uploads/1781397606454-chatgpt-image-14-jun-2026-08-38-55.png",
+      "caption": "Upacara sekolah"
+    },
+    {
+      "image": "assets/img/uploads/1781397678445-a-laboratorium.png",
+      "caption": "pelajaran di laboratorium"
+    },
+    {
+      "image": "assets/img/uploads/1781397823429-a-perpustakaan.png",
+      "caption": "perpustakaan"
+    },
+    {
+      "image": "assets/img/uploads/1781397875946-a-olahraga.png",
+      "caption": "olahraga"
+    }
+  ],
+  "privateReports": [
+    {
+      "id": "report-sarana-toilet-001",
+      "reportDate": "2026-06-15",
+      "reportedBy": "Operator Sekolah",
+      "category": "Sarana Prasarana",
+      "itemName": "Toilet",
+      "total": "4",
+      "good": "3",
+      "minorDamage": "0",
+      "unusable": "1",
+      "urgency": "tinggi",
+      "status": "draft",
+      "evidenceImage": "",
+      "description": "Contoh laporan privat: Toilet tersedia 4 unit, 3 baik, 1 tidak layak pakai. Lampirkan foto bukti kondisi lapangan."
+    }
+  ]
+}

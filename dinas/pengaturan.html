@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pengaturan</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/dinas.css" />
+</head>
+<body data-page="pengaturan">
+  <div class="app-shell">
+    <aside class="sidebar" id="dinasSidebar"></aside>
+    <main class="main-content">
+      <header class="topbar" id="dinasTopbar"></header>
+      <section class="page-title">
+        <p class="eyebrow">Sistem</p>
+        <h1>Pengaturan</h1>
+        <p>Atur identitas dashboard, logo/foto Dinas di sidebar, admin, periode laporan, dan target monitoring.</p>
+      </section>
+
+      <form id="settingsForm">
+        <section class="dashboard-grid">
+          <article class="panel">
+            <div class="panel-head">
+              <div>
+                <h2>Identitas Sidebar</h2>
+                <span class="helper">Bagian ini mengatur logo dan teks di sidebar semua halaman.</span>
+              </div>
+            </div>
+            <div class="logo-setting">
+              <div class="logo-preview" id="logoPreview"></div>
+              <div class="settings-grid">
+                <label>Upload Logo / Foto Dinas<input name="logoFile" type="file" accept="image/*" /></label>
+                <label>URL Logo / Foto Dinas<input name="logoUrl" placeholder="Kosongkan untuk memakai logo default" /></label>
+                <label>Nama Sidebar<input name="agencyName" placeholder="Dinas Pendidikan" /></label>
+                <label>Wilayah Sidebar<input name="agencyRegion" placeholder="Kota Makassar" /></label>
+                <label>Nama Sistem<input name="systemName" placeholder="Sistem Monitoring Website Sekolah" /></label>
+              </div>
+            </div>
+          </article>
+
+          <article class="panel">
+            <div class="panel-head">
+              <div>
+                <h2>Admin & Periode</h2>
+                <span class="helper">Akan menjadi konfigurasi akun dan periode laporan pada versi produksi.</span>
+              </div>
+            </div>
+            <div class="logo-setting">
+              <div class="logo-preview avatar-preview" id="adminPhotoPreview"></div>
+              <div class="settings-grid">
+                <label>Upload Foto Admin<input name="adminPhotoFile" type="file" accept="image/*" /></label>
+                <label>URL Foto Admin<input name="adminPhotoUrl" placeholder="Kosongkan untuk memakai foto default" /></label>
+                <label>Nama Admin<input name="adminName" placeholder="Admin Dinas" /></label>
+                <label>Email Administrator<input name="adminEmail" placeholder="admin@disdik.makassar.go.id" /></label>
+                <label>Zona Waktu<input name="timezone" placeholder="WITA - Makassar" /></label>
+                <label>Tahun Aktif<input name="activeYear" placeholder="2026" /></label>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <section class="panel section-gap">
+          <div class="panel-head">
+            <div>
+              <h2>Target Monitoring</h2>
+              <span class="helper">Nilai ini membantu Dinas membaca prioritas monitoring saat data sudah produksi.</span>
+            </div>
+          </div>
+          <div class="settings-grid">
+            <label>Frekuensi Rekap
+              <select name="reportFrequency">
+                <option>Mingguan</option>
+                <option>Bulanan</option>
+                <option>Triwulan</option>
+              </select>
+            </label>
+            <label>Batas Konten Rendah<input name="lowContentLimit" placeholder="70%" /></label>
+            <label>Target Website Aktif<input name="activeWebsiteTarget" placeholder="95%" /></label>
+          </div>
+          <div class="form-actions">
+            <button class="primary-button" type="submit"><i class="fa-solid fa-floppy-disk"></i> Simpan Pengaturan</button>
+            <button class="secondary-button" id="resetSettings" type="button"><i class="fa-solid fa-rotate-left"></i> Reset Default</button>
+          </div>
+          <p class="helper form-note" id="settingsMessage">Pengaturan tersimpan di browser untuk kebutuhan prototype presentasi.</p>
+        </section>
+      </form>
+    </main>
+  </div>
+  <script src="assets/js/dinas.js"></script>
+</body>
+</html>

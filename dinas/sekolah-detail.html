@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Detail Sekolah</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/dinas.css" />
+</head>
+<body data-page="sekolah">
+  <div class="app-shell">
+    <aside class="sidebar" id="dinasSidebar"></aside>
+    <main class="main-content" id="schoolDetail">
+      <header class="topbar" id="dinasTopbar"></header>
+      <section class="page-title with-action">
+        <div>
+          <p class="eyebrow">Detail Sekolah</p>
+          <h1 id="detailTitle">Detail Sekolah</h1>
+          <p id="detailSubtitle">Memuat data sekolah...</p>
+        </div>
+        <a class="secondary-button" href="sekolah.html"><i class="fa-solid fa-arrow-left"></i> Kembali</a>
+      </section>
+
+      <section class="metric-grid" id="detailMetrics"></section>
+
+      <section class="dashboard-grid">
+        <article class="panel">
+          <div class="panel-head">
+            <div>
+              <h2>Profil Sekolah</h2>
+              <span class="helper">Identitas, operator, dan tautan website.</span>
+            </div>
+          </div>
+          <div id="detailProfile"></div>
+        </article>
+        <article class="panel">
+          <div class="panel-head">
+            <div>
+              <h2>Ringkasan Data Website</h2>
+              <span class="helper">Data sarpras yang tampil di website sekolah dan publikasi pendukung.</span>
+            </div>
+          </div>
+          <div class="stat-list" id="detailSarpras"></div>
+        </article>
+      </section>
+
+      <section class="panel section-gap">
+        <div class="panel-head">
+          <div>
+            <h2>Kelengkapan Konten Website</h2>
+            <span class="helper">Persentase per modul informasi publik sekolah.</span>
+          </div>
+        </div>
+        <div class="bar-chart" id="detailContent"></div>
+      </section>
+    </main>
+  </div>
+  <script src="assets/js/dinas.js"></script>
+</body>
+</html>

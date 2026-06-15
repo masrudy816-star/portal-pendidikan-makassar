@@ -7,6 +7,7 @@ const navItems = [
   ["konten", "konten.html", "fa-file-lines", "Konten & Informasi"],
   ["sarpras", "sarpras.html", "fa-building", "Sarana & Prasarana"],
   ["pelaporan-privat", "pelaporan-privat.html", "fa-lock", "Pelaporan Privat"],
+  ["peringkat-sekolah", "peringkat-sekolah.html", "fa-ranking-star", "Peringkat Sekolah"],
   ["berita", "berita.html", "fa-calendar-days", "Berita & Kegiatan"],
   ["galeri", "galeri.html", "fa-images", "Galeri"],
   ["laporan", "laporan.html", "fa-chart-line", "Statistik & Laporan"],
@@ -823,6 +824,133 @@ function exportPrivateReportsCsv(reports) {
   URL.revokeObjectURL(url);
 }
 
+function normalizeScore(value, max) {
+  const number = Number(value || 0);
+  if (!Number.isFinite(number) || max <= 0) return 0;
+  return Math.min(100, Math.round((number / max) * 100));
+}
+
+function updateFreshnessScore(value = "") {
+  const text = String(value).toLowerCase();
+  if (text.includes("baru") || text.includes("hari ini") || text.includes("juni 2026") || text.includes("jun 2026")) return 100;
+  if (text.includes("mei 2026") || text.includes("mei")) return 82;
+  if (text.includes("april") || text.includes("apr")) return 68;
+  if (text.includes("maret") || text.includes("mar")) return 55;
+  if (text.includes("-") || !text.trim()) return 35;
+  return 72;
+}
+
+function rankingCategory(score) {
+  if (score >= 86) return { label: "Sangat Aktif", cls: "active" };
+  if (score >= 72) return { label: "Aktif", cls: "active" };
+  if (score >= 58) return { label: "Perlu Pendampingan", cls: "warning" };
+  return { label: "Prioritas Pembinaan", cls: "danger" };
+}
+
+function rankMedal(rank) {
+  if (rank === 1) return '<span class="rank-medal gold">1</span>';
+  if (rank === 2) return '<span class="rank-medal silver">2</span>';
+  if (rank === 3) return '<span class="rank-medal bronze">3</span>';
+  return '<span class="rank-medal">' + rank + '</span>';
+}
+
+function computeSchoolRankings(data) {
+  const schools = data.schools || [];
+  const reports = collectPrivateReports(data);
+  const maxNews = Math.max(...schools.map((item) => Number(item.news || 0)), 1);
+  const maxGallery = Math.max(...schools.map((item) => Number(item.gallery || 0)), 1);
+  const maxServices = Math.max(...schools.map((item) => Number(item.services || 0) + Number(item.downloads || 0)), 1);
+
+  return schools.map((school) => {
+    const schoolReports = reports.filter((report) => report.schoolId === school.id);
+    const completedReports = schoolReports.filter((report) => ["Selesai", "Diproses", "Butuh Verifikasi"].includes(report.followUpStatus)).length;
+    const reportScore = schoolReports.length ? Math.round((completedReports / schoolReports.length) * 100) : 78;
+    const contentScore = contentAverage(school);
+    const statusScore = school.status === "Aktif" ? 100 : school.status === "Dalam Perbaikan" ? 62 : 22;
+    const newsScore = normalizeScore(school.news, maxNews);
+    const galleryScore = normalizeScore(school.gallery, maxGallery);
+    const serviceScore = normalizeScore(Number(school.services || 0) + Number(school.downloads || 0), maxServices);
+    const freshScore = updateFreshnessScore(school.lastUpdate);
+    const activityScore = Math.round((newsScore * 0.38) + (galleryScore * 0.28) + (serviceScore * 0.18) + (freshScore * 0.16));
+    const finalScore = Math.round((contentScore * 0.36) + (activityScore * 0.26) + (statusScore * 0.18) + (serviceScore * 0.1) + (reportScore * 0.1));
+    const category = rankingCategory(finalScore);
+
+    return {
+      ...school,
+      contentScore,
+      statusScore,
+      activityScore,
+      reportScore,
+      finalScore,
+      categoryLabel: category.label,
+      categoryClass: category.cls,
+      reportCount: schoolReports.length,
+      completedReports
+    };
+  }).sort((a, b) => b.finalScore - a.finalScore || b.activityScore - a.activityScore || b.contentScore - a.contentScore)
+    .map((school, index) => ({ ...school, rank: index + 1 }));
+}
+
+function renderRankingPage(data) {
+  const rankingTable = $("#rankingTable");
+  if (!rankingTable) return;
+
+  const rankings = computeSchoolRankings(data);
+  const top = rankings[0];
+  const averageScore = avg(rankings.map((item) => item.finalScore));
+  const activeSchools = rankings.filter((item) => item.status === "Aktif").length;
+  const needsSupport = rankings.filter((item) => item.finalScore < 58).length;
+
+  $("#rankingMetrics").innerHTML = [
+    metric("fa-trophy", top ? top.name : "-", "Peringkat 1"),
+    metric("fa-chart-line", averageScore + "%", "Rata-rata Skor"),
+    metric("fa-school-circle-check", fmt(activeSchools), "Website Aktif"),
+    metric("fa-handshake-angle", fmt(needsSupport), "Perlu Pembinaan")
+  ].join("");
+
+  if (top) {
+    $("#topSchoolPanel").innerHTML = '<div class="panel-head"><div><h2>Sekolah Terbaik</h2><span class="helper">Skor gabungan tertinggi.</span></div></div>' +
+      '<div class="top-school-card"><span class="rank-medal gold">1</span><div><strong>' + top.name + '</strong><small>' + top.level + ' · ' + top.district + '</small></div><b>' + top.finalScore + '%</b></div>' +
+      '<div class="score-breakdown"><div><span>Konten</span><strong>' + top.contentScore + '%</strong></div><div><span>Aktivitas</span><strong>' + top.activityScore + '%</strong></div><div><span>Laporan</span><strong>' + top.reportScore + '%</strong></div></div>';
+  }
+
+  $("#topRankingList").innerHTML = rankings.slice(0, 5).map((item) =>
+    '<div class="mini-rank-item"><span>' + rankMedal(item.rank) + '</span><div><strong>' + item.name + '</strong><small>' + item.level + ' · ' + item.district + '</small></div><b>' + item.finalScore + '%</b></div>'
+  ).join("");
+
+  $("#rankingAttentionList").innerHTML = rankings.slice().reverse().slice(0, 5).map((item) =>
+    '<div class="mini-rank-item"><span>' + rankMedal(item.rank) + '</span><div><strong>' + item.name + '</strong><small>' + item.categoryLabel + ' · ' + item.district + '</small></div><b>' + item.finalScore + '%</b></div>'
+  ).join("");
+
+  const search = $("#rankingSearch");
+  const level = $("#rankingLevelFilter");
+  const district = $("#rankingDistrictFilter");
+  const status = $("#rankingStatusFilter");
+
+  if (district && !district.dataset.loaded) {
+    [...new Set(rankings.map((item) => item.district))].sort().forEach((name) => {
+      district.insertAdjacentHTML("beforeend", '<option>' + name + '</option>');
+    });
+    district.dataset.loaded = "true";
+  }
+
+  const render = () => {
+    const keyword = (search?.value || "").toLowerCase();
+    const filtered = rankings
+      .filter((item) => !keyword || (item.name + ' ' + item.district + ' ' + item.operator + ' ' + item.npsn).toLowerCase().includes(keyword))
+      .filter((item) => !level?.value || item.level === level.value)
+      .filter((item) => !district?.value || item.district === district.value)
+      .filter((item) => !status?.value || item.status === status.value);
+
+    $("#rankingCount").textContent = fmt(filtered.length) + " sekolah ditampilkan";
+    rankingTable.innerHTML = filtered.length
+      ? filtered.map((item) => '<tr><td>' + rankMedal(item.rank) + '</td><td><strong>' + item.name + '</strong><br><span class="table-subtext">NPSN ' + item.npsn + ' · ' + item.operator + '</span></td><td>' + item.level + '</td><td>' + item.district + '</td><td>' + badge(item.status) + '</td><td>' + progress(item.contentScore) + '</td><td><div class="score-pill"><strong>' + item.activityScore + '%</strong><span>' + fmt(item.news) + ' berita · ' + fmt(item.gallery) + ' galeri</span></div></td><td><strong class="final-score">' + item.finalScore + '%</strong></td><td><span class="badge ' + item.categoryClass + '">' + item.categoryLabel + '</span></td><td>' + schoolLink(item) + '</td></tr>').join("")
+      : emptyState("Tidak ada sekolah yang sesuai dengan filter ranking.", 10);
+  };
+
+  wireFilter([search, level, district, status], render);
+}
+
 function renderGalleryPage(data) {
   const galleryTable = $("#galleryTable");
   if (!galleryTable) return;
@@ -972,6 +1100,7 @@ async function init() {
   renderContentPage(data);
   renderFacilityPage(data);
   renderPrivateReportsPage(data);
+  renderRankingPage(data);
   renderGalleryPage(data);
   renderNewsPage(data);
   renderReportPage(data);

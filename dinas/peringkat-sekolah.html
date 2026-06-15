@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Peringkat Sekolah - Dashboard Dinas</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/dinas.css" />
+</head>
+<body data-page="peringkat-sekolah">
+  <div class="app-shell">
+    <aside class="sidebar" id="dinasSidebar"></aside>
+    <main class="main-content">
+      <header class="topbar" id="dinasTopbar"></header>
+      <section class="page-title">
+        <p class="eyebrow">Evaluasi Kinerja Website</p>
+        <h1>Peringkat Sekolah</h1>
+        <p>Ranking sekolah berdasarkan kelengkapan konten, aktivitas publikasi, status website, layanan digital, dan tindak lanjut laporan privat.</p>
+      </section>
+
+      <section class="metric-grid" id="rankingMetrics"></section>
+
+      <section class="dashboard-grid ranking-overview">
+        <article class="panel highlight-panel" id="topSchoolPanel"></article>
+        <article class="panel">
+          <div class="panel-head">
+            <div>
+              <h2>Top 5 Sekolah</h2>
+              <span class="helper">Sekolah dengan skor monitoring tertinggi.</span>
+            </div>
+          </div>
+          <div class="ranking-mini-list" id="topRankingList"></div>
+        </article>
+        <article class="panel">
+          <div class="panel-head">
+            <div>
+              <h2>Perlu Pendampingan</h2>
+              <span class="helper">Prioritas pembinaan operator sekolah.</span>
+            </div>
+          </div>
+          <div class="ranking-mini-list attention" id="rankingAttentionList"></div>
+        </article>
+      </section>
+
+      <section class="panel section-gap">
+        <div class="panel-head">
+          <div>
+            <h2>Tabel Peringkat Sekolah</h2>
+            <span class="helper" id="rankingCount">0 sekolah ditampilkan</span>
+          </div>
+          <div class="panel-actions">
+            <a href="konten.html">Monitoring konten</a>
+            <a href="pelaporan-privat.html">Laporan privat</a>
+          </div>
+        </div>
+        <div class="filter-row four">
+          <input id="rankingSearch" type="search" placeholder="Cari sekolah, kecamatan, atau operator..." />
+          <select id="rankingLevelFilter">
+            <option value="">Semua jenjang</option>
+            <option>SD</option>
+            <option>SMP</option>
+            <option>SMA</option>
+            <option>SMK</option>
+          </select>
+          <select id="rankingDistrictFilter">
+            <option value="">Semua kecamatan</option>
+          </select>
+          <select id="rankingStatusFilter">
+            <option value="">Semua status</option>
+            <option>Aktif</option>
+            <option>Dalam Perbaikan</option>
+            <option>Tidak Aktif</option>
+          </select>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Rank</th>
+                <th>Sekolah</th>
+                <th>Jenjang</th>
+                <th>Kecamatan</th>
+                <th>Status</th>
+                <th>Kelengkapan</th>
+                <th>Aktivitas</th>
+                <th>Skor Akhir</th>
+                <th>Kategori</th>
+                <th>Aksi</th>
+              </tr>
+            </thead>
+            <tbody id="rankingTable"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="assets/js/dinas.js?v=20260615-ranking"></script>
+</body>
+</html>

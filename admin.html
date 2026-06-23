@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/admin.css?v=20260615-report-form" />
+  <link rel="stylesheet" href="assets/css/admin.css?v=20260623-demo-login" />
 </head>
 <body>
   <main class="admin-shell">
@@ -21,7 +21,8 @@
           <input id="adminPassword" type="password" autocomplete="current-password" placeholder="Masukkan kode admin" required />
         </label>
         <button type="submit">Masuk Panel</button>
-        <small>Kode awal: <strong>admin123</strong>. Ini pengaman lokal, bukan login produksi.</small>
+        <p class="form-note" id="adminLoginMessage" aria-live="polite"></p>
+        <small>Kode demo sekolah: <strong>sekolah123</strong>. Untuk produksi, login harus memakai server dan database.</small>
       </form>
     </section>
 

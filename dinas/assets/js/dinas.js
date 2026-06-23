@@ -39,6 +39,10 @@ const avg = (items) => items.length ? Math.round(items.reduce((sum, value) => su
 const localSchoolsKey = "dinasAdditionalSchools";
 const appSettingsKey = "dinasAppSettings";
 const privateReportActionsKey = "dinasPrivateReportActions";
+const dinasSessionKey = "dinasLoggedIn";
+const dinasLoginAtKey = "dinasLoginAt";
+const dinasUserRoleKey = "dinasUserRole";
+const dinasSessionDuration = 8 * 60 * 60 * 1000;
 const defaultSettings = {
   systemName: "Sistem Monitoring Website Sekolah",
   agencyName: "Dinas Pendidikan",
@@ -54,8 +58,21 @@ const defaultSettings = {
   activeWebsiteTarget: "95%"
 };
 
+function clearDinasSession() {
+  localStorage.removeItem(dinasSessionKey);
+  localStorage.removeItem(dinasLoginAtKey);
+  localStorage.removeItem(dinasUserRoleKey);
+}
+
+function isDinasSessionValid() {
+  const loggedIn = localStorage.getItem(dinasSessionKey) === "true";
+  const loginAt = Number(localStorage.getItem(dinasLoginAtKey) || 0);
+  return loggedIn && loginAt && Date.now() - loginAt < dinasSessionDuration;
+}
+
 function requireLogin() {
-  if (page !== "login" && localStorage.getItem("dinasLoggedIn") !== "true") {
+  if (page !== "login" && !isDinasSessionValid()) {
+    clearDinasSession();
     location.href = "login.html";
   }
 }
@@ -81,7 +98,7 @@ function renderShell() {
       </div>
     `;
     sidebar.querySelector('[data-nav="logout"]')?.addEventListener("click", () => {
-      localStorage.removeItem("dinasLoggedIn");
+      clearDinasSession();
     });
   }
 

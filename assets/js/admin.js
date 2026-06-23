@@ -1,5 +1,8 @@
-const ADMIN_PASSWORD = "admin123";
+const ADMIN_PASSWORD = "sekolah123";
 const TECHNICIAN_PASSWORD = "teknisi123";
+const ADMIN_SESSION_KEY = "schoolAdminLoggedIn";
+const ADMIN_LOGIN_AT_KEY = "schoolAdminLoginAt";
+const ADMIN_SESSION_DURATION = 8 * 60 * 60 * 1000;
 const JSON_PATH = "data/school.json";
 const UPLOAD_DIR = ["assets", "img", "uploads"];
 const SERVICE_PAGE_KEYS = ["e-learning", "e-rapor", "perpustakaan", "jadwal", "unduhan"];
@@ -39,6 +42,23 @@ let serverApiAvailable = false;
 const $ = (selector, root = document) => root.querySelector(selector);
 const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
 const statusBox = $("#statusBox");
+const adminLoginMessage = $("#adminLoginMessage");
+
+function isAdminSessionValid() {
+  const loggedIn = localStorage.getItem(ADMIN_SESSION_KEY) === "true";
+  const loginAt = Number(localStorage.getItem(ADMIN_LOGIN_AT_KEY) || 0);
+  return loggedIn && loginAt && Date.now() - loginAt < ADMIN_SESSION_DURATION;
+}
+
+function setAdminSession() {
+  localStorage.setItem(ADMIN_SESSION_KEY, "true");
+  localStorage.setItem(ADMIN_LOGIN_AT_KEY, String(Date.now()));
+}
+
+function clearAdminSession() {
+  localStorage.removeItem(ADMIN_SESSION_KEY);
+  localStorage.removeItem(ADMIN_LOGIN_AT_KEY);
+}
 
 function setStatus(message, type = "info") {
   statusBox.textContent = message;
@@ -1286,17 +1306,20 @@ function addItem(type) {
 $("#loginForm").addEventListener("submit", async (event) => {
   event.preventDefault();
   if ($("#adminPassword").value !== ADMIN_PASSWORD) {
-    alert("Kode admin salah.");
+    adminLoginMessage.textContent = "Kode admin salah. Gunakan kode demo sekolah yang benar.";
+    adminLoginMessage.classList.add("is-error");
     return;
   }
-  localStorage.setItem("schoolAdminLoggedIn", "true");
+  adminLoginMessage.textContent = "";
+  adminLoginMessage.classList.remove("is-error");
+  setAdminSession();
   $("#loginPanel").hidden = true;
   $("#dashboard").hidden = false;
   await loadData().catch((error) => setStatus(`Gagal memuat data: ${error.message}`, "error"));
 });
 
 $("#logoutButton").addEventListener("click", () => {
-  localStorage.removeItem("schoolAdminLoggedIn");
+  clearAdminSession();
   location.reload();
 });
 
@@ -1312,8 +1335,10 @@ $$("[data-add]").forEach((button) => button.addEventListener("click", () => addI
 window.addEventListener("hashchange", updateActiveAdminNav);
 updateActiveAdminNav();
 
-if (localStorage.getItem("schoolAdminLoggedIn") === "true") {
+if (isAdminSessionValid()) {
   $("#loginPanel").hidden = true;
   $("#dashboard").hidden = false;
   loadData().catch((error) => setStatus(`Gagal memuat data: ${error.message}`, "error"));
+} else {
+  clearAdminSession();
 }

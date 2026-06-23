@@ -23,17 +23,34 @@
       <p class="eyebrow">Portal Internal</p>
       <h2>Masuk ke Dashboard</h2>
       <form id="dinasLoginForm">
-        <label>Email atau Username<input type="text" value="admin" required /></label>
-        <label>Password<input type="password" value="admin123" required /></label>
+        <label>Email atau Username<input id="dinasUsername" type="text" autocomplete="username" placeholder="Masukkan username admin Dinas" required /></label>
+        <label>Password<input id="dinasPassword" type="password" autocomplete="current-password" placeholder="Masukkan password" required /></label>
         <button type="submit">Masuk Dashboard</button>
+        <p class="form-note" id="dinasLoginMessage" aria-live="polite"></p>
       </form>
-      <small>Demo lokal: gunakan username <strong>admin</strong> dan password <strong>admin123</strong>.</small>
+      <small>Akun demo Dinas: username <strong>dinas</strong> dan password <strong>dinas123</strong>. Untuk produksi, login harus memakai server dan database.</small>
     </section>
   </main>
   <script>
-    document.getElementById("dinasLoginForm").addEventListener("submit", (event) => {
+    const DINAS_USERNAME = "dinas";
+    const DINAS_PASSWORD = "dinas123";
+    const form = document.getElementById("dinasLoginForm");
+    const message = document.getElementById("dinasLoginMessage");
+
+    form.addEventListener("submit", (event) => {
       event.preventDefault();
+      const username = document.getElementById("dinasUsername").value.trim().toLowerCase();
+      const password = document.getElementById("dinasPassword").value;
+
+      if (username !== DINAS_USERNAME || password !== DINAS_PASSWORD) {
+        message.textContent = "Username atau password admin Dinas salah.";
+        message.classList.add("is-error");
+        return;
+      }
+
       localStorage.setItem("dinasLoggedIn", "true");
+      localStorage.setItem("dinasLoginAt", String(Date.now()));
+      localStorage.setItem("dinasUserRole", "admin-dinas");
       location.href = "dashboard.html";
     });
   </script>

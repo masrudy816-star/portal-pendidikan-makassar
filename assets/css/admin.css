@@ -83,6 +83,17 @@ textarea {
   resize: vertical;
 }
 
+.form-note {
+  min-height: 20px;
+  margin: 10px 0 0;
+  font-size: 12px;
+}
+
+.form-note.is-error {
+  color: var(--danger);
+  font-weight: 800;
+}
+
 button,
 .preview-link {
   border: 0;
@@ -243,6 +254,13 @@ button,
 .notice.warning {
   border-left-color: var(--danger);
   background: #fff7ed;
+}
+
+.notice[data-type="error"] {
+  border-left-color: var(--danger);
+  background: #fff1f0;
+  color: #7a271a;
+  font-weight: 800;
 }
 
 .notice[data-type="success"] {
